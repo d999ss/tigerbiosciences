@@ -101,7 +101,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
@@ -113,9 +113,10 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList className="justify-center">
+          {/* Desktop Navigation - Centered */}
+          <div className="flex-1 flex justify-center">
+            <NavigationMenu className="hidden lg:flex">
+              <NavigationMenuList>
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Products</NavigationMenuTrigger>
@@ -201,8 +202,9 @@ export function Header() {
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
