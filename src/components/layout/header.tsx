@@ -83,8 +83,8 @@ export function Header() {
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Our Solutions</NavigationMenuTrigger>
-                <NavigationMenuContent className="left-1/2 transform -translate-x-1/2">
-                  <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-2">
+                <NavigationMenuContent>
+                  <div className="grid w-[70vw] max-w-[500px] gap-3 p-4 grid-cols-1">
                     {solutions.map((section) => (
                       <div key={section.title} className="space-y-2">
                         <h4 className="font-semibold text-tiger-red">{section.title}</h4>
