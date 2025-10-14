@@ -18,8 +18,8 @@ const solutions = [
   {
     title: "Wound Care & Pain Management",
     items: [
-      { title: "Tiger Wound Care", href: "https://tigerwoundcare.com/" },
-      { title: "Extremity Care", href: "https://extremitycare.com" },
+      { title: "Tiger Wound Care", href: "https://tigerwoundcare.com/", external: true },
+      { title: "Extremity Care", href: "https://extremitycare.com", external: true },
       { title: "Encore Surgical Dressings", href: "/our-divisions/encore-surgical-dressings/" },
     ],
   },
@@ -27,7 +27,7 @@ const solutions = [
     title: "Soft Tissue Recon & Aesthetics",
     items: [
       { title: "Tiger Aesthetics", href: "/our-divisions/tiger-aesthetics/" },
-      { title: "Sientra", href: "/our-divisions/sientra/" },
+      { title: "Sientra", href: "https://sientra.com", external: true },
       { title: "BioCreations", href: "/our-divisions/biocreations/" },
       { title: "Revelle Aesthetics", href: "/our-divisions/revelle-aesthetics/" },
       { title: "Suneva", href: "/our-divisions/suneva/" },
@@ -122,8 +122,10 @@ export function Header() {
                             <li key={item.title}>
                               <Link
                                 href={item.href}
-                                className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground">
+                                className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
+                                {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}>
                                 {item.title}
+                                {item.external && <span className="ml-1 text-xs">↗</span>}
                               </Link>
                             </li>
                           ))}
@@ -186,8 +188,10 @@ export function Header() {
                             key={item.title}
                             href={item.href}
                             className="block text-sm hover:text-tiger-red"
-                            onClick={() => setIsMobileMenuOpen(false)}>
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}>
                             {item.title}
+                            {item.external && <span className="ml-1 text-xs">↗</span>}
                           </Link>
                         ))}
                       </div>
