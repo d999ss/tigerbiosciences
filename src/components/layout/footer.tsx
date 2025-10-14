@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-white relative">
       {/* Wave Divider */}
-      <div className="absolute top-0 left-0 w-full">
+      <div className="absolute top-0 left-0 w-full pointer-events-none">
         <img 
           src="/assets/images/07/new_footer_divider.svg" 
           alt="Footer divider" 
@@ -17,11 +17,11 @@ export function Footer() {
       </div>
       
       {/* CMS CTA Button */}
-      <div className="container mx-auto px-4 pt-8 pb-4">
+      <div className="container mx-auto px-4 pt-8 pb-4 relative z-10">
         <div className="flex justify-center">
           <Button 
             asChild
-            className="bg-tiger-red hover:bg-tiger-red-dark text-white px-6 py-3 text-sm font-medium"
+            className="bg-tiger-red hover:bg-tiger-red-dark text-white px-6 py-3 text-sm font-medium relative z-20"
           >
             <Link 
               href="https://tigerbiosciences.com/wp-content/uploads/2025/09/Tiger_BioSciences_MPFS_and_OPPS_Comment_Letter_v2.pdf"
