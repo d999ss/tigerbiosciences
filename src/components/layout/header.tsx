@@ -115,7 +115,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
+            <NavigationMenuList className="justify-center">
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Products</NavigationMenuTrigger>
