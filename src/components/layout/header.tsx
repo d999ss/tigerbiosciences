@@ -171,7 +171,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {resources.map((section) => (
@@ -269,7 +269,7 @@ export function Header() {
               </div>
 
               <div className="px-3 py-2">
-                <div className="text-base font-medium mb-2">Resources</div>
+                <div className="text-base font-medium mb-2">Company</div>
                 <div className="pl-4 space-y-1">
                   {resources.map((section) => (
                     <div key={section.title} className="mb-3">
