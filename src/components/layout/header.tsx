@@ -100,7 +100,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
+          <NavigationMenu className="hidden lg:flex max-w-full">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
@@ -112,8 +112,8 @@ export function Header() {
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Our Solutions</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[90vw] max-w-[800px] gap-3 p-4 md:grid-cols-2">
+                <NavigationMenuContent className="left-0 right-0 w-screen max-w-[calc(100vw-2rem)]">
+                  <div className="grid w-full gap-3 p-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
                     {solutions.map((section) => (
                       <div key={section.title} className="space-y-2">
                         <h4 className="font-semibold text-tiger-red">{section.title}</h4>
