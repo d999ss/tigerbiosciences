@@ -20,33 +20,33 @@ const solutions = [
     items: [
       { title: "Tiger Wound Care", href: "https://tigerwoundcare.com/", external: true },
       { title: "Extremity Care", href: "https://extremitycare.com", external: true },
-      { title: "Encore Surgical Dressings", href: "/our-divisions/encore-surgical-dressings/" },
+      { title: "Encore Surgical Dressings", href: "https://tigerbiosciences.com/our-companies/encore-surgical-dressings/", external: true },
     ],
   },
   {
     title: "Soft Tissue Recon & Aesthetics",
     items: [
-      { title: "Tiger Aesthetics", href: "/our-divisions/tiger-aesthetics/" },
+      { title: "Tiger Aesthetics", href: "https://tigerbiosciences.com/our-companies/tiger-aesthetics/", external: true },
       { title: "Sientra", href: "https://sientra.com", external: true },
-      { title: "BioCreations", href: "/our-divisions/biocreations/" },
-      { title: "Revelle Aesthetics", href: "/our-divisions/revelle-aesthetics/" },
-      { title: "Suneva", href: "/our-divisions/suneva/" },
+      { title: "BioCreations", href: "https://tigerbiosciences.com/our-companies/biocreations/", external: true },
+      { title: "Revelle Aesthetics", href: "https://tigerbiosciences.com/our-companies/revelle-aesthetics/", external: true },
+      { title: "Suneva", href: "https://tigerbiosciences.com/our-companies/suneva/", external: true },
     ],
   },
   {
     title: "Tissue R&D, Processing and Recovery",
     items: [
-      { title: "RegenTX", href: "/our-divisions/regentx/" },
-      { title: "RegenTX Labs", href: "/our-divisions/regentx-labs/" },
-      { title: "Birth Tissue Recovery", href: "/our-divisions/biocare/" },
-      { title: "bioCARE", href: "/our-divisions/biocare/" },
+      { title: "RegenTX", href: "https://tigerbiosciences.com/our-companies/regentx/", external: true },
+      { title: "RegenTX Labs", href: "https://tigerbiosciences.com/our-companies/regentx-labs/", external: true },
+      { title: "Birth Tissue Recovery", href: "https://tigerbiosciences.com/our-companies/biocare/", external: true },
+      { title: "bioCARE", href: "https://tigerbiosciences.com/our-companies/biocare/", external: true },
     ],
   },
   {
     title: "Tiger International",
     items: [
-      { title: "Lizard Health Technology", href: "/our-divisions/lizard-health-technology/" },
-      { title: "Airway Medix", href: "/our-divisions/airway-medix/" },
+      { title: "Lizard Health Technology", href: "https://tigerbiosciences.com/our-companies/lizard-health-technology/", external: true },
+      { title: "Airway Medix", href: "https://tigerbiosciences.com/our-companies/airway-medix/", external: true },
     ],
   },
 ]
