@@ -98,7 +98,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center">
@@ -119,7 +119,7 @@ export function Header() {
               <NavigationMenuList>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-0 shadow-none">Company</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {resources.map((section) => (
@@ -144,7 +144,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-0 shadow-none">Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-2">
                     {solutions.map((section) => (
@@ -169,7 +169,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-0 shadow-none">Products</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {products.map((section) => (
@@ -197,7 +197,7 @@ export function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/career" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                  <Link href="/career" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors">
                     Career
                   </Link>
                 </NavigationMenuLink>
