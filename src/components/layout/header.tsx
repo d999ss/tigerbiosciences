@@ -58,11 +58,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Top Bar */}
       <div className="bg-tiger-red text-white py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm space-y-2 md:space-y-0">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <MapPin className="h-4 w-4" />
-              <span>555 E North Ln, Ste 5000, Bldg D, Conshohocken, PA 19428</span>
+              <span className="hidden sm:inline">555 E North Ln, Ste 5000, Bldg D, Conshohocken, PA 19428</span>
+              <span className="sm:hidden">Conshohocken, PA</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -75,13 +76,15 @@ export function Header() {
             <Button size="sm" className="bg-white text-tiger-red hover:bg-gray-100">
               <Link href="/contact">Let&apos;s Get Together</Link>
             </Button>
-            <Link href="https://www.linkedin.com/company/tiger-biosciences-llc/" target="_blank">
-              <Linkedin className="h-5 w-5 hover:text-gray-300" />
+            <Link
+              href="https://www.linkedin.com/company/tiger-biosciences-llc/"
+              target="_blank"
+              className="hover:text-gray-300">
+              <Linkedin className="h-5 w-5" />
             </Link>
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
@@ -110,7 +113,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Our Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid w-[800px] gap-3 p-4 md:grid-cols-2">
+                  <div className="grid w-[90vw] max-w-[800px] gap-3 p-4 md:grid-cols-2">
                     {solutions.map((section) => (
                       <div key={section.title} className="space-y-2">
                         <h4 className="font-semibold text-tiger-red">{section.title}</h4>
@@ -119,8 +122,7 @@ export function Header() {
                             <li key={item.title}>
                               <Link
                                 href={item.href}
-                                className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
-                              >
+                                className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground">
                                 {item.title}
                               </Link>
                             </li>
@@ -184,8 +186,7 @@ export function Header() {
                             key={item.title}
                             href={item.href}
                             className="block text-sm hover:text-tiger-red"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
+                            onClick={() => setIsMobileMenuOpen(false)}>
                             {item.title}
                           </Link>
                         ))}
@@ -213,5 +214,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

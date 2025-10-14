@@ -66,18 +66,17 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <Link 
-                href="https://www.linkedin.com/company/tiger-biosciences-llc/" 
+              <Link
+                href="https://www.linkedin.com/company/tiger-biosciences-llc/"
                 target="_blank"
                 className="hover:text-tiger-red transition-colors"
-              >
+                legacyBehavior>
                 <Linkedin className="h-6 w-6" />
               </Link>
             </div>
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -101,5 +100,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
