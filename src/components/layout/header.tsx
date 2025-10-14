@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { Menu, X, Phone, MapPin, Linkedin } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -56,35 +56,6 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      {/* Top Bar */}
-      <div className="bg-tiger-red text-white py-2">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm space-y-2 md:space-y-0">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <MapPin className="h-4 w-4" />
-              <span className="hidden sm:inline">555 E North Ln, Ste 5000, Bldg D, Conshohocken, PA 19428</span>
-              <span className="sm:hidden">Conshohocken, PA</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4" />
-              <Link href="tel:+18886655005" className="hover:underline">
-                (+1) 888 665 5005
-              </Link>
-            </div>
-            <Button size="sm" className="bg-white text-tiger-red hover:bg-gray-100">
-              <Link href="/contact">Let&apos;s Get Together</Link>
-            </Button>
-            <Link
-              href="https://www.linkedin.com/company/tiger-biosciences-llc/"
-              target="_blank"
-              className="hover:text-gray-300">
-              <Linkedin className="h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </div>
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
