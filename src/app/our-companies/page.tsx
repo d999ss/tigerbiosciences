@@ -5,7 +5,6 @@ import { Item, ItemIcon, ItemTitle, ItemDescription } from "@/components/ui/item
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, ExternalLink, Building2, Users, Award, Globe, Shield, Zap } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 
 const companies = [

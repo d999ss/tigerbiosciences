@@ -104,8 +104,8 @@ export default function Career() {
               Career Opportunities
             </h1>
             <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
-              Join Tiger BioSciences and be part of a team that's advancing medical technology 
-              and improving patient outcomes worldwide. We're looking for passionate professionals 
+              Join Tiger BioSciences and be part of a team that&apos;s advancing medical technology 
+              and improving patient outcomes worldwide. We&apos;re looking for passionate professionals 
               who want to make a difference.
             </p>
             <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
@@ -201,11 +201,11 @@ export default function Career() {
       <Section>
         <div className="max-w-container mx-auto text-center">
           <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight mb-6">
-            Don't See the Right Role?
+            Don&apos;t See the Right Role?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals to join our team. 
-            Send us your resume and let us know how you'd like to contribute to our mission.
+            We&apos;re always looking for talented individuals to join our team. 
+            Send us your resume and let us know how you&apos;d like to contribute to our mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-tiger-red hover:bg-tiger-red-dark text-white">

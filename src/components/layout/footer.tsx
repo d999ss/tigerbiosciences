@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { Mail, Linkedin, FileText, Phone, MapPin, Users, Building2, Heart, Shield, Award, Globe } from "lucide-react"
+import { Mail, Linkedin, FileText, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -21,7 +21,7 @@ export function Footer() {
               rel="noopener noreferrer"
             >
               <FileText className="mr-2 h-4 w-4" />
-              Review Tiger BioSciences' comments on CMS's proposed Physician Fee Schedule rules
+              Review Tiger BioSciences&apos; comments on CMS&apos;s proposed Physician Fee Schedule rules
             </Link>
           </Button>
         </div>
