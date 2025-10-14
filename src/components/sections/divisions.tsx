@@ -60,8 +60,8 @@ export function Divisions() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-tiger text-3xl md:text-4xl font-bold text-tiger-red mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-tiger text-headline text-tiger-red mb-6">
             Our Divisions
           </h2>
         </div>
@@ -72,15 +72,15 @@ export function Divisions() {
               <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="font-tiger text-tiger-red text-xl">
+                    <CardTitle className="font-tiger text-tiger-red text-title">
                       {division.title}
                     </CardTitle>
-                    <p className="text-lg font-semibold text-gray-700">
+                    <p className="text-subtitle text-muted-foreground">
                       {division.subtitle}
                     </p>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-body text-muted-foreground">
                       {division.description}
                     </p>
                   </CardContent>
@@ -115,7 +115,7 @@ export function Divisions() {
                     height={100}
                     className="mx-auto mb-4 group-hover:scale-105 transition-transform"
                   />
-                  <h4 className="font-semibold text-sm text-gray-700">
+                  <h4 className="text-caption text-muted-foreground">
                     {company.name}
                   </h4>
                 </CardContent>

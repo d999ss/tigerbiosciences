@@ -124,15 +124,15 @@ export function Header() {
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {resources.map((section) => (
                       <div key={section.title} className="space-y-2">
-                        <h4 className="font-semibold text-tiger-red">{section.title}</h4>
+                        <h4 className="text-caption font-semibold text-tiger-red">{section.title}</h4>
                         <ul className="space-y-1">
                           {section.items.map((item) => (
                             <li key={item.title}>
                               <Link
                                 href={item.href}
                                 className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground">
-                                <div className="font-medium">{item.title}</div>
-                                <div className="text-xs text-muted-foreground">{item.description}</div>
+                                <div className="text-caption font-medium">{item.title}</div>
+                                <div className="text-small text-muted-foreground">{item.description}</div>
                               </Link>
                             </li>
                           ))}
@@ -149,15 +149,15 @@ export function Header() {
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-2">
                     {solutions.map((section) => (
                       <div key={section.title} className="space-y-2">
-                        <h4 className="font-semibold text-tiger-red">{section.title}</h4>
+                        <h4 className="text-caption font-semibold text-tiger-red">{section.title}</h4>
                         <ul className="space-y-1">
                           {section.items.map((item) => (
                             <li key={item.title}>
                               <Link
                                 href={item.href}
                                 className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground">
-                                <div className="font-medium">{item.title}</div>
-                                <div className="text-xs text-muted-foreground">{item.description}</div>
+                                <div className="text-caption font-medium">{item.title}</div>
+                                <div className="text-small text-muted-foreground">{item.description}</div>
                               </Link>
                             </li>
                           ))}
@@ -174,7 +174,7 @@ export function Header() {
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {products.map((section) => (
                       <div key={section.title} className="space-y-2">
-                        <h4 className="font-semibold text-tiger-red">{section.title}</h4>
+                        <h4 className="text-caption font-semibold text-tiger-red">{section.title}</h4>
                         <ul className="space-y-1">
                           {section.items.map((item) => (
                             <li key={item.title}>
@@ -182,8 +182,8 @@ export function Header() {
                                 href={item.href}
                                 className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
                                 {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}>
-                                <div className="font-medium">{item.title}</div>
-                                <div className="text-xs text-muted-foreground">{item.description}</div>
+                                <div className="text-caption font-medium">{item.title}</div>
+                                <div className="text-small text-muted-foreground">{item.description}</div>
                                 {item.external && <span className="ml-1 text-xs">↗</span>}
                               </Link>
                             </li>
@@ -227,13 +227,13 @@ export function Header() {
                 <div className="pl-4 space-y-1">
                   {resources.map((section) => (
                     <div key={section.title} className="mb-3">
-                      <div className="text-sm font-semibold text-tiger-red mb-1">{section.title}</div>
+                      <div className="text-caption font-semibold text-tiger-red mb-1">{section.title}</div>
                       <div className="pl-2 space-y-1">
                         {section.items.map((item) => (
                           <Link
                             key={item.title}
                             href={item.href}
-                            className="block text-sm hover:text-tiger-red"
+                            className="block text-caption hover:text-tiger-red"
                             onClick={() => setIsMobileMenuOpen(false)}>
                             {item.title}
                           </Link>
@@ -249,13 +249,13 @@ export function Header() {
                 <div className="pl-4 space-y-1">
                   {solutions.map((section) => (
                     <div key={section.title} className="mb-3">
-                      <div className="text-sm font-semibold text-tiger-red mb-1">{section.title}</div>
+                      <div className="text-caption font-semibold text-tiger-red mb-1">{section.title}</div>
                       <div className="pl-2 space-y-1">
                         {section.items.map((item) => (
                           <Link
                             key={item.title}
                             href={item.href}
-                            className="block text-sm hover:text-tiger-red"
+                            className="block text-caption hover:text-tiger-red"
                             onClick={() => setIsMobileMenuOpen(false)}>
                             {item.title}
                           </Link>
@@ -271,13 +271,13 @@ export function Header() {
                 <div className="pl-4 space-y-1">
                   {products.map((section) => (
                     <div key={section.title} className="mb-3">
-                      <div className="text-sm font-semibold text-tiger-red mb-1">{section.title}</div>
+                      <div className="text-caption font-semibold text-tiger-red mb-1">{section.title}</div>
                       <div className="pl-2 space-y-1">
                         {section.items.map((item) => (
                           <Link
                             key={item.title}
                             href={item.href}
-                            className="block text-sm hover:text-tiger-red"
+                            className="block text-caption hover:text-tiger-red"
                             onClick={() => setIsMobileMenuOpen(false)}
                             {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}>
                             {item.title}

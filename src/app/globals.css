@@ -149,32 +149,114 @@
   .font-tiger {
     font-family: var(--font-tiger);
   }
-  
+
   .text-tiger-red {
     color: var(--tiger-red);
   }
-  
+
   .bg-tiger-red {
     background-color: var(--tiger-red);
   }
-  
+
   .bg-tiger-red-light {
     background-color: var(--tiger-red-light);
   }
-  
+
   .bg-tiger-red-dark {
     background-color: var(--tiger-red-dark);
   }
-  
+
   .border-tiger-red {
     border-color: var(--tiger-red);
   }
-  
+
   .hover\:bg-tiger-red:hover {
     background-color: var(--tiger-red);
   }
-  
+
   .hover\:text-tiger-red:hover {
     color: var(--tiger-red);
+  }
+
+  /* Vercel-inspired Typography System */
+  .text-display {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .text-headline {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .text-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .text-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .text-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .text-body-large {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .text-caption {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .text-small {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .text-display {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+
+    .text-headline {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .text-title {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .text-display {
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .text-headline {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
   }
 }
