@@ -17,15 +17,15 @@ export function Hero() {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-6">
             <h4 className="font-tiger text-tiger-red text-xl md:text-2xl mb-4">
               Tiger BioSciences
             </h4>
           </div>
-          <h1 className="font-tiger text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+          <h1 className="font-tiger text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
             The first<br />
-            <span className="ml-8">&nbsp;&nbsp;&nbsp;&nbsp;of its kind.</span>
+            <span className="block sm:inline sm:ml-4 md:ml-6 lg:ml-8">of its kind.</span>
           </h1>
         </div>
       </div>
