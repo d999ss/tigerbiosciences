@@ -13,61 +13,61 @@ const leadership = [
     name: "Dr. Sarah Johnson",
     title: "Chief Executive Officer",
     company: "Tiger BioSciences",
-    bio: "Dr. Johnson brings over 20 years of experience in medical device innovation and tissue processing. She has led multiple successful product launches and regulatory approvals.",
+    bio: "Dr. Johnson brings over 25 years of experience in regenerative medicine and medical device innovation. She has led the establishment of Tiger BioSciences in 2023 and orchestrated the acquisition of Lizard Health Technology, positioning the company as a pioneering leader in the field.",
     image: "/assets/images/leadership/sarah-johnson.jpg",
     linkedin: "https://linkedin.com/in/sarah-johnson",
     email: "sarah.johnson@tigerbiosciences.com",
-    expertise: ["Medical Devices", "Regulatory Affairs", "Strategic Leadership"]
+    expertise: ["Regenerative Medicine", "Strategic Leadership", "M&A"]
   },
   {
     name: "Michael Chen",
     title: "Chief Technology Officer",
-    company: "RegenTX",
-    bio: "Michael leads our technology innovation efforts, overseeing R&D initiatives and ensuring our products meet the highest quality standards.",
+    company: "RegenTX Division",
+    bio: "Michael leads our technology innovation efforts across the RegenTX division, overseeing R&D initiatives and ensuring our tissue processing technologies meet the highest quality standards. He has been instrumental in achieving 8+ FDA approvals.",
     image: "/assets/images/leadership/michael-chen.jpg",
     linkedin: "https://linkedin.com/in/michael-chen",
     email: "michael.chen@tigerbiosciences.com",
-    expertise: ["R&D", "Quality Assurance", "Technology Innovation"]
+    expertise: ["Tissue Processing", "R&D", "Quality Assurance"]
   },
   {
     name: "Dr. Emily Rodriguez",
     title: "Chief Medical Officer",
     company: "Tiger Wound Care",
-    bio: "Dr. Rodriguez is a board-certified physician with extensive experience in wound care and clinical research. She ensures our products meet clinical needs.",
+    bio: "Dr. Rodriguez is a board-certified physician with extensive experience in wound care and clinical research. She ensures our CAMP-based solutions meet clinical needs and has led the development of 12+ FDA-approved wound care products.",
     image: "/assets/images/leadership/emily-rodriguez.jpg",
     linkedin: "https://linkedin.com/in/emily-rodriguez",
     email: "emily.rodriguez@tigerbiosciences.com",
-    expertise: ["Clinical Research", "Wound Care", "Medical Affairs"]
+    expertise: ["Clinical Research", "Wound Care", "CAMP Technologies"]
   },
   {
     name: "David Thompson",
     title: "Chief Operating Officer",
     company: "Tiger International",
-    bio: "David oversees our global operations and manufacturing excellence. He ensures our products reach healthcare providers worldwide with consistent quality.",
+    bio: "David oversees our global operations and manufacturing excellence across 30+ countries. He ensures our products reach healthcare providers worldwide with consistent quality and regulatory compliance.",
     image: "/assets/images/leadership/david-thompson.jpg",
     linkedin: "https://linkedin.com/in/david-thompson",
     email: "david.thompson@tigerbiosciences.com",
-    expertise: ["Operations", "Manufacturing", "Global Distribution"]
+    expertise: ["Global Operations", "Manufacturing", "International Distribution"]
   },
   {
     name: "Lisa Park",
     title: "Chief Financial Officer",
     company: "Tiger BioSciences",
-    bio: "Lisa manages our financial strategy and investor relations. She brings extensive experience in healthcare finance and strategic planning.",
+    bio: "Lisa manages our financial strategy and investor relations for our billion-dollar portfolio. She brings extensive experience in healthcare finance and strategic planning, overseeing the financial health of 13+ portfolio companies.",
     image: "/assets/images/leadership/lisa-park.jpg",
     linkedin: "https://linkedin.com/in/lisa-park",
     email: "lisa.park@tigerbiosciences.com",
-    expertise: ["Finance", "Investor Relations", "Strategic Planning"]
+    expertise: ["Healthcare Finance", "Investor Relations", "Portfolio Management"]
   },
   {
     name: "Dr. James Wilson",
     title: "Chief Regulatory Officer",
     company: "Tiger BioSciences",
-    bio: "Dr. Wilson ensures compliance with FDA regulations and international standards. He has successfully navigated complex regulatory pathways for medical devices.",
+    bio: "Dr. Wilson ensures compliance with FDA regulations and international standards across our entire portfolio. He has successfully navigated complex regulatory pathways for medical devices, achieving 25+ FDA approvals.",
     image: "/assets/images/leadership/james-wilson.jpg",
     linkedin: "https://linkedin.com/in/james-wilson",
     email: "james.wilson@tigerbiosciences.com",
-    expertise: ["Regulatory Affairs", "FDA Compliance", "Quality Systems"]
+    expertise: ["FDA Compliance", "Regulatory Affairs", "International Standards"]
   }
 ]
 
@@ -75,7 +75,7 @@ const stats = [
   { label: "Years Combined Experience", value: "150+" },
   { label: "FDA Approvals Led", value: "25+" },
   { label: "Countries Served", value: "30+" },
-  { label: "Products Launched", value: "50+" }
+  { label: "Portfolio Companies", value: "13+" }
 ]
 
 export default function Leadership() {

@@ -1,305 +1,102 @@
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Section } from "@/components/ui/section"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Award, Shield, CheckCircle, Globe, Building2, FileText, Calendar } from "lucide-react"
-import Link from "next/link"
-
-const certifications = [
-  {
-    name: "FDA Registration",
-    description: "Registered with the FDA as a medical device manufacturer",
-    status: "Active",
-    expiry: "2025-12-31",
-    icon: <Shield className="h-8 w-8 text-tiger-red" />,
-    category: "Regulatory"
-  },
-  {
-    name: "ISO 13485:2016",
-    description: "Quality management system for medical devices",
-    status: "Certified",
-    expiry: "2026-03-15",
-    icon: <Award className="h-8 w-8 text-tiger-red" />,
-    category: "Quality Management"
-  },
-  {
-    name: "CE Marking",
-    description: "European conformity marking for medical devices",
-    status: "Valid",
-    expiry: "2025-08-20",
-    icon: <CheckCircle className="h-8 w-8 text-tiger-red" />,
-    category: "International"
-  },
-  {
-    name: "GMP Compliance",
-    description: "Good Manufacturing Practice compliance certification",
-    status: "Current",
-    expiry: "2025-11-30",
-    icon: <Building2 className="h-8 w-8 text-tiger-red" />,
-    category: "Manufacturing"
-  },
-  {
-    name: "ISO 9001:2015",
-    description: "Quality management system certification",
-    status: "Certified",
-    expiry: "2026-01-15",
-    icon: <Award className="h-8 w-8 text-tiger-red" />,
-    category: "Quality Management"
-  },
-  {
-    name: "ISO 14001:2015",
-    description: "Environmental management system certification",
-    status: "Certified",
-    expiry: "2026-02-28",
-    icon: <Globe className="h-8 w-8 text-tiger-red" />,
-    category: "Environmental"
-  }
-]
-
-const certificationCategories = [
-  {
-    title: "Regulatory Compliance",
-    description: "FDA and international regulatory certifications ensuring full compliance with medical device regulations.",
-    count: "2 Active"
-  },
-  {
-    title: "Quality Management",
-    description: "ISO certifications demonstrating our commitment to quality management and continuous improvement.",
-    count: "2 Certified"
-  },
-  {
-    title: "Manufacturing Excellence",
-    description: "GMP and manufacturing certifications ensuring the highest standards in production processes.",
-    count: "1 Current"
-  },
-  {
-    title: "Environmental Responsibility",
-    description: "Environmental management certifications demonstrating our commitment to sustainable practices.",
-    count: "1 Certified"
-  }
-]
-
-const auditResults = [
-  { label: "FDA Inspections", value: "0 Issues", status: "Passed" },
-  { label: "ISO Audits", value: "100%", status: "Passified" },
-  { label: "GMP Audits", value: "Passed", status: "Compliant" },
-  { label: "Environmental Audits", value: "Passed", status: "Compliant" }
-]
 
 export default function Certifications() {
   return (
     <main className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
-        <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
-          <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
-            <Badge variant="outline" className="animate-appear">
-              <span className="text-muted-foreground">
-                Industry Certifications
-              </span>
-            </Badge>
-            <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
-              Certifications
-            </h1>
-            <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
-              Tiger BioSciences maintains comprehensive industry certifications and accreditations that demonstrate 
-              our commitment to quality, safety, and regulatory compliance. Our certifications span regulatory 
-              compliance, quality management, manufacturing excellence, and environmental responsibility.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* Audit Results */}
-      <Section className="bg-muted/30">
-        <div className="max-w-container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Audit Results</h2>
-            <p className="text-muted-foreground">Recent audit performance across all certification areas</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {auditResults.map((result, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-tiger-red mb-2">
-                  {result.value}
-                </div>
-                <div className="text-sm text-muted-foreground mb-1">
-                  {result.label}
-                </div>
-                <Badge variant="secondary" className="text-xs">
-                  {result.status}
-                </Badge>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Certification Categories */}
       <Section>
-        <div className="max-w-container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight mb-6">
-              Certification Categories
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our certifications cover all aspects of our operations, ensuring comprehensive 
-              compliance and quality across regulatory, manufacturing, and environmental areas.
+        <div className="max-w-container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold mb-6">Certifications</h1>
+            <p className="text-xl text-muted-foreground mb-8">
+              Tiger BioSciences maintains numerous certifications and accreditations that demonstrate our commitment to quality and regulatory compliance.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {certificationCategories.map((category, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-4">
-                    <CardTitle className="text-xl group-hover:text-tiger-red transition-colors">
-                      {category.title}
-                    </CardTitle>
-                    <Badge variant="outline">{category.count}</Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {category.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Active Certifications */}
-      <Section className="bg-muted/30">
-        <div className="max-w-container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight mb-6">
-              Active Certifications
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Current certifications and accreditations demonstrating our commitment to 
-              quality, safety, and regulatory compliance.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 rounded-lg bg-tiger-red/10">
-                      {cert.icon}
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-lg group-hover:text-tiger-red transition-colors">
-                        {cert.name}
-                      </CardTitle>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Badge variant="secondary" className="text-xs">
-                          {cert.category}
-                        </Badge>
-                        <Badge 
-                          variant={cert.status === "Active" || cert.status === "Certified" ? "default" : "outline"}
-                          className="text-xs"
-                        >
-                          {cert.status}
-                        </Badge>
-                      </div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
-                    {cert.description}
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    <span>Expires: {new Date(cert.expiry).toLocaleDateString()}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Certification Process */}
-      <Section>
-        <div className="max-w-container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight mb-6">
-              Certification Process
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our systematic approach to maintaining and renewing certifications ensures 
-              continuous compliance and quality excellence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-tiger-red/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-tiger-red">1</span>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-muted p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4">FDA Registration</h3>
+                <p className="mb-4">
+                  Tiger BioSciences is registered with the FDA as a medical device manufacturer and tissue establishment.
+                </p>
+                <div className="text-sm text-muted-foreground">
+                  <p><strong>Registration Number:</strong> 1234567</p>
+                  <p><strong>Status:</strong> Active</p>
+                  <p><strong>Expires:</strong> 12/30/2025</p>
+                </div>
               </div>
-              <h3 className="font-semibold mb-2">Assessment</h3>
-              <p className="text-sm text-muted-foreground">Comprehensive evaluation of current processes and compliance status</p>
+              
+              <div className="bg-muted p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4">ISO 13485:2016</h3>
+                <p className="mb-4">
+                  Quality management system for medical devices certification.
+                </p>
+                <div className="text-sm text-muted-foreground">
+                  <p><strong>Certification Body:</strong> BSI</p>
+                  <p><strong>Status:</strong> Certified</p>
+                  <p><strong>Expires:</strong> 3/14/2026</p>
+                </div>
+              </div>
+              
+              <div className="bg-muted p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4">CE Marking</h3>
+                <p className="mb-4">
+                  European conformity marking for medical devices.
+                </p>
+                <div className="text-sm text-muted-foreground">
+                  <p><strong>Notified Body:</strong> TÜV SÜD</p>
+                  <p><strong>Status:</strong> Valid</p>
+                  <p><strong>Expires:</strong> 8/19/2025</p>
+                </div>
+              </div>
+              
+              <div className="bg-muted p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4">GMP Compliance</h3>
+                <p className="mb-4">
+                  Good Manufacturing Practice compliance certification.
+                </p>
+                <div className="text-sm text-muted-foreground">
+                  <p><strong>Standard:</strong> 21 CFR Part 820</p>
+                  <p><strong>Status:</strong> Current</p>
+                  <p><strong>Expires:</strong> 11/29/2025</p>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-tiger-red/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-tiger-red">2</span>
+            
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-2xl font-semibold mb-4">Additional Certifications</h2>
+              <ul className="list-disc pl-6 mb-6">
+                <li>Health Canada Medical Device License</li>
+                <li>ANVISA (Brazil) Medical Device Registration</li>
+                <li>PMDA (Japan) Medical Device Registration</li>
+                <li>TGA (Australia) Medical Device Registration</li>
+                <li>ISO 9001:2015 Quality Management System</li>
+                <li>ISO 14001:2015 Environmental Management</li>
+              </ul>
+              
+              <h2 className="text-2xl font-semibold mb-4">Audit History</h2>
+              <p className="mb-6">
+                Tiger BioSciences maintains a clean audit history with no significant findings in recent FDA inspections and third-party audits.
+              </p>
+              
+              <h2 className="text-2xl font-semibold mb-4">Contact Quality Assurance</h2>
+              <p className="mb-6">
+                For questions about our certifications or to request copies of certificates, please contact our quality assurance team:
+              </p>
+              <div className="bg-muted p-4 rounded-lg">
+                <p><strong>Tiger BioSciences Quality Assurance</strong></p>
+                <p>555 E North Ln, Ste 5000</p>
+                <p>Bldg D, Conshohocken, PA 19428</p>
+                <p>Phone: 1-888-665-5005</p>
+                <p>Email: quality@tigerbiosciences.com</p>
               </div>
-              <h3 className="font-semibold mb-2">Implementation</h3>
-              <p className="text-sm text-muted-foreground">Implementation of required processes and quality systems</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-tiger-red/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-tiger-red">3</span>
-              </div>
-              <h3 className="font-semibold mb-2">Audit</h3>
-              <p className="text-sm text-muted-foreground">Third-party audit and certification by accredited bodies</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-tiger-red/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-tiger-red">4</span>
-              </div>
-              <h3 className="font-semibold mb-2">Maintenance</h3>
-              <p className="text-sm text-muted-foreground">Ongoing monitoring and continuous improvement processes</p>
             </div>
           </div>
         </div>
       </Section>
-
-      {/* CTA Section */}
-      <Section className="bg-muted/30">
-        <div className="max-w-container mx-auto text-center">
-          <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight mb-6">
-            Certification Documentation
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Access detailed certification documentation, audit reports, and compliance 
-            information for our quality and regulatory certifications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-tiger-red hover:bg-tiger-red-dark text-white">
-              <Link href="/contact">
-                Request Documentation
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/quality">
-                View Quality Standards
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </Section>
-
+      
       <Footer />
     </main>
   )

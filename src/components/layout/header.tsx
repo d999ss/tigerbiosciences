@@ -48,6 +48,7 @@ const resources = [
   {
     title: "Company",
     items: [
+      { title: "About Us", href: "/about", description: "Our mission, vision, and company story" },
       { title: "Our Companies", href: "/our-companies", description: "Explore our portfolio of companies" },
       { title: "Leadership", href: "/leadership", description: "Meet our executive team" },
       { title: "News & Updates", href: "/news", description: "Latest company news and updates" },
@@ -66,6 +67,7 @@ const resources = [
   {
     title: "Resources",
     items: [
+      { title: "Technology", href: "/technology", description: "Learn about our CAMP technologies" },
       { title: "Regulatory Information", href: "/regulatory", description: "FDA and regulatory compliance" },
       { title: "Certifications", href: "/certifications", description: "Industry certifications and standards" },
       { title: "Safety Standards", href: "/safety", description: "Safety protocols and procedures" },

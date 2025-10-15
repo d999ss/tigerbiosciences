@@ -10,69 +10,69 @@ import Link from "next/link"
 
 const newsItems = [
   {
-    title: "Tiger BioSciences Receives FDA Approval for New Wound Care Product",
-    excerpt: "Our latest CAMP-based wound care solution has received FDA clearance, expanding our portfolio of advanced medical technologies.",
-    date: "2025-01-15",
-    category: "Regulatory",
+    title: "Tiger BioSciences Files Legal Action Against MiMedx Group",
+    excerpt: "Tiger Medical Holdings, LLC, along with subsidiaries Extremity Care and RegentX Partners, files complaint against MiMedx Group in U.S. District Court for the Western District of Texas.",
+    date: "2025-04-15",
+    category: "Legal",
     image: "/assets/images/news/fda-approval.jpg",
-    href: "/news/fda-approval-wound-care",
+    href: "/news/legal-action-mimedx",
     featured: true
   },
   {
-    title: "RegenTX Launches Advanced Tissue Processing Facility",
-    excerpt: "New state-of-the-art facility increases our tissue processing capacity by 300%, enabling us to serve more healthcare providers worldwide.",
-    date: "2025-01-10",
-    category: "Expansion",
+    title: "Tiger BioSciences Acquires Controlling Stake in Lizard Health Technology",
+    excerpt: "Strategic acquisition strengthens Tiger BioSciences' position in biotechnology sector, expanding development and quality management capabilities across the portfolio.",
+    date: "2023-12-01",
+    category: "Acquisition",
     image: "/assets/images/news/facility-launch.jpg",
-    href: "/news/regenTX-facility-launch",
+    href: "/news/lizard-health-acquisition",
     featured: true
   },
   {
-    title: "Tiger Aesthetics Partners with Leading Dermatology Practices",
-    excerpt: "Strategic partnerships with 50+ dermatology practices across the US to expand access to our aesthetic solutions.",
-    date: "2025-01-08",
-    category: "Partnerships",
+    title: "Tiger BioSciences Establishes Headquarters in San Antonio, Texas",
+    excerpt: "Company officially establishes headquarters in San Antonio, Texas, positioning itself as a pioneering leader in regenerative medicine with a team of 51-100 employees.",
+    date: "2023-06-01",
+    category: "Company",
     image: "/assets/images/news/partnerships.jpg",
-    href: "/news/aesthetics-partnerships",
+    href: "/news/san-antonio-headquarters",
     featured: false
   },
   {
-    title: "International Expansion: Tiger BioSciences Enters European Markets",
-    excerpt: "We're excited to announce our expansion into key European markets, bringing our innovative solutions to healthcare providers across the continent.",
-    date: "2025-01-05",
-    category: "International",
+    title: "Portfolio Companies Achieve 25+ FDA Approvals",
+    excerpt: "Tiger BioSciences' comprehensive portfolio of companies has achieved over 25 FDA approvals and regulatory clearances across wound care, aesthetics, and tissue processing divisions.",
+    date: "2024-11-15",
+    category: "Regulatory",
     image: "/assets/images/news/europe-expansion.jpg",
-    href: "/news/europe-expansion",
+    href: "/news/fda-approvals-milestone",
     featured: false
   },
   {
-    title: "Research Collaboration with Leading Medical Universities",
-    excerpt: "New research partnerships with top medical universities to advance tissue processing and wound care technologies.",
-    date: "2025-01-03",
-    category: "Research",
+    title: "Global Expansion: Serving Healthcare Providers in 30+ Countries",
+    excerpt: "Tiger BioSciences International enables worldwide distribution of cutting-edge cell and tissue products, serving healthcare providers across 30+ countries with regulatory excellence.",
+    date: "2024-09-20",
+    category: "International",
     image: "/assets/images/news/research-collaboration.jpg",
-    href: "/news/research-collaboration",
+    href: "/news/global-expansion",
     featured: false
   },
   {
-    title: "Tiger BioSciences Recognized for Innovation Excellence",
-    excerpt: "Industry recognition for our commitment to innovation and quality in medical device manufacturing and tissue processing.",
-    date: "2024-12-28",
-    category: "Awards",
+    title: "Vertical Integration Model Drives Innovation in Regenerative Medicine",
+    excerpt: "Tiger BioSciences' fully integrated approach—from donor screening to distribution—ensures unparalleled quality and innovation in cellular, acellular, and matrix-like products (CAMPs).",
+    date: "2024-07-10",
+    category: "Innovation",
     image: "/assets/images/news/innovation-award.jpg",
-    href: "/news/innovation-excellence-award",
+    href: "/news/vertical-integration-model",
     featured: false
   }
 ]
 
 const categories = [
   { name: "All", count: 6 },
+  { name: "Legal", count: 1 },
+  { name: "Acquisition", count: 1 },
+  { name: "Company", count: 1 },
   { name: "Regulatory", count: 1 },
-  { name: "Expansion", count: 1 },
-  { name: "Partnerships", count: 1 },
   { name: "International", count: 1 },
-  { name: "Research", count: 1 },
-  { name: "Awards", count: 1 }
+  { name: "Innovation", count: 1 }
 ]
 
 export default function News() {

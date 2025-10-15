@@ -122,6 +122,12 @@ export function Footer() {
             <h3 className="font-semibold">Resources</h3>
             <div className="space-y-3">
               <Link 
+                href="/technology/" 
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Technology
+              </Link>
+              <Link 
                 href="/career/" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >

@@ -1,16 +1,18 @@
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { Hero } from "@/components/sections/hero"
-import { Welcome } from "@/components/sections/welcome"
-import { Divisions } from "@/components/sections/divisions"
+import { HeroEnhanced } from "@/components/sections/hero-enhanced"
+import { WelcomeEnhanced } from "@/components/sections/welcome-enhanced"
+import { DivisionsEnhanced } from "@/components/sections/divisions-enhanced"
+import { StatsEnhanced } from "@/components/sections/stats-enhanced"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Hero />
-      <Welcome />
-      <Divisions />
+      <HeroEnhanced />
+      <StatsEnhanced />
+      <WelcomeEnhanced />
+      <DivisionsEnhanced />
       <Footer />
     </main>
   )

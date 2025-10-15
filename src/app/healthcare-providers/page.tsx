@@ -5,7 +5,7 @@ import { Item, ItemIcon, ItemTitle, ItemDescription } from "@/components/ui/item
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Users, Shield, Award, Globe, Zap, CheckCircle, Heart } from "lucide-react"
+import { ArrowRight, Users, Shield, Award, Globe, Zap, Heart } from "lucide-react"
 import Link from "next/link"
 
 const providerSolutions = [

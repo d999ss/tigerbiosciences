@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, FileText, Download, Book, Users, Shield, Award, Globe, Calendar, ExternalLink } from "lucide-react"
+import { ArrowRight, FileText, Download, Book, Users, Shield, Award, Calendar, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 const documentationCategories = [
