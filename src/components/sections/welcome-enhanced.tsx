@@ -7,123 +7,145 @@ import {
   Shield,
   Zap,
   Users,
-  Microscope,
-  Heart,
-  Sparkles,
-  Award,
+  ArrowRight,
 } from "lucide-react";
 
-import {
-  Item,
-  ItemIcon,
-  ItemTitle,
-  ItemDescription,
-} from "@/components/ui/item";
 import { Section } from "@/components/ui/section";
+import { Button } from "@/components/ui/button";
 
-interface ItemProps {
+interface FeatureProps {
   title: string;
   description: string;
   icon: ReactNode;
-  image?: string;
+  image: string;
+  stats?: string;
 }
 
-interface ItemsProps {
+interface FeaturesProps {
   title?: string;
-  items?: ItemProps[] | false;
+  subtitle?: string;
+  features?: FeatureProps[];
   className?: string;
 }
 
 export function WelcomeEnhanced({
-  title = "Everything you need. Nothing you don't.",
-  items = [
+  title = "Comprehensive Solutions for Modern Healthcare",
+  subtitle = "From research to clinical application, we provide end-to-end regenerative medicine solutions that transform patient outcomes.",
+  features = [
     {
-      title: "Global reach",
-      description: "Serving healthcare providers in 30+ countries with our comprehensive portfolio of regenerative medicine solutions",
-      icon: <Globe className="text-brand size-5 stroke-1" />,
+      title: "Global Reach",
+      description: "Serving healthcare providers in 30+ countries with our comprehensive portfolio of regenerative medicine solutions, backed by extensive clinical data and regulatory approvals.",
+      icon: <Globe className="w-6 h-6" />,
       image: "/assets/images/biotech/team-collaboration.jpg",
+      stats: "30+ Countries"
     },
     {
-      title: "FDA approved",
-      description: "Over 25 FDA approvals and regulatory clearances across our portfolio companies, ensuring the highest quality standards",
-      icon: <Shield className="text-brand size-5 stroke-1" />,
-      image: "/assets/images/news/fda-approval.jpg",
-    },
-    {
-      title: "Innovation first",
-      description: "Pioneering the future of regenerative medicine through cutting-edge research, development, and clinical applications",
-      icon: <Zap className="text-brand size-5 stroke-1" />,
+      title: "FDA Approved Excellence",
+      description: "Over 25 FDA approvals and regulatory clearances across our portfolio companies, ensuring the highest quality standards and patient safety in every product we deliver.",
+      icon: <Shield className="w-6 h-6" />,
       image: "/assets/images/biotech/research-lab.jpg",
+      stats: "25+ FDA Approvals"
     },
     {
-      title: "Expert leadership",
-      description: "150+ years of combined executive experience driving innovation in medical technology and tissue processing",
-      icon: <Users className="text-brand size-5 stroke-1" />,
-      image: "/assets/images/biotech/team-collaboration.jpg",
+      title: "Innovation Leadership",
+      description: "Pioneering the future of regenerative medicine through cutting-edge research, development, and clinical applications that set new industry standards.",
+      icon: <Zap className="w-6 h-6" />,
+      image: "/assets/images/biotech/hero-lab.jpg",
+      stats: "13+ Portfolio Companies"
     },
     {
-      title: "Tissue science",
-      description: "Advanced tissue processing and CAMP-based innovation with rigorous protocols and scientific methods",
-      icon: <Microscope className="text-brand size-5 stroke-1" />,
-      image: "/assets/images/biotech/microscope.jpg",
-    },
-    {
-      title: "Patient care",
-      description: "Comprehensive solutions for wound care, soft tissue reconstruction, and aesthetic medicine",
-      icon: <Heart className="text-brand size-5 stroke-1" />,
+      title: "Expert Leadership",
+      description: "150+ years of combined executive experience driving innovation in medical technology and tissue processing, with deep expertise across all aspects of regenerative medicine.",
+      icon: <Users className="w-6 h-6" />,
       image: "/assets/images/biotech/clinical-lab.jpg",
-    },
-    {
-      title: "Quality assurance",
-      description: "Fully integrated approach from donor screening to global distribution ensuring unparalleled quality",
-      icon: <Award className="text-brand size-5 stroke-1" />,
-      image: "/assets/images/biotech/manufacturing.jpg",
-    },
-    {
-      title: "Future ready",
-      description: "Cutting-edge technologies and methodologies that position us at the forefront of regenerative medicine",
-      icon: <Sparkles className="text-brand size-5 stroke-1" />,
-      image: "/assets/images/biotech/tissue-engineering.jpg",
+      stats: "150+ Years Experience"
     },
   ],
   className,
-}: ItemsProps) {
+}: FeaturesProps) {
   return (
-    <Section className={className}>
-      <div className="max-w-container mx-auto flex flex-col items-center gap-6 sm:gap-20">
-        <h2 className="max-w-[560px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
-          {title}
-        </h2>
-            {items !== false && items.length > 0 && (
-              <div className="grid auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {items.map((item, index) => (
-                  <div key={index} className="group relative overflow-hidden rounded-xl bg-card border shadow-sm hover:shadow-lg transition-all duration-300">
-                    {item.image && (
-                      <div className="relative h-48 overflow-hidden">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                        <div className="absolute top-4 left-4">
-                          <ItemIcon>{item.icon}</ItemIcon>
-                        </div>
-                      </div>
-                    )}
-                    <div className="p-6">
-                      <ItemTitle className="mb-3">
-                        {item.title}
-                      </ItemTitle>
-                      <ItemDescription>{item.description}</ItemDescription>
+    <Section className={`py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 ${className}`}>
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-full text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
+            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+            Our Capabilities
+          </div>
+          
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">
+            {title}
+          </h2>
+          
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            {subtitle}
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+          {features.map((feature, index) => (
+            <div key={index} className="group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 dark:border-slate-700">
+              {/* Image Section */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                
+                {/* Icon Overlay */}
+                <div className="absolute top-6 left-6">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-white border border-white/30">
+                    {feature.icon}
+                  </div>
+                </div>
+                
+                {/* Stats Badge */}
+                {feature.stats && (
+                  <div className="absolute top-6 right-6">
+                    <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold border border-white/30">
+                      {feature.stats}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
-            )}
+              
+              {/* Content Section */}
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                  {feature.description}
+                </p>
+                
+                <Button 
+                  variant="ghost" 
+                  className="group/btn p-0 h-auto text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <Button 
+            variant="glow" 
+            size="lg" 
+            className="px-8 py-4 text-lg font-semibold"
+          >
+            Explore All Solutions
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
       </div>
     </Section>
   );
 }
-

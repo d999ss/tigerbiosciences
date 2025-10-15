@@ -32,7 +32,7 @@ export function CTAEnhanced({
     {
       href: "/contact",
       text: "Contact Us",
-      variant: "default",
+      variant: "glow",
       iconRight: <ArrowRight className="ml-2 h-4 w-4" />,
     },
     {
@@ -59,7 +59,6 @@ export function CTAEnhanced({
                 variant={button.variant || "default"}
                 size="lg"
                 asChild
-                className={button.variant === "default" ? "bg-tiger-red hover:bg-tiger-red-dark text-white" : ""}
               >
                 <Link href={button.href}>
                   {button.icon}
