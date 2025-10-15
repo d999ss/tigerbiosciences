@@ -68,8 +68,8 @@ export function WelcomeEnhanced({
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-full text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
-            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-full text-red-700 dark:text-red-300 text-sm font-medium mb-6">
+            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
             Our Capabilities
           </div>
           
@@ -124,7 +124,7 @@ export function WelcomeEnhanced({
                 
                 <Button 
                   variant="ghost" 
-                  className="group/btn p-0 h-auto text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
+                  className="group/btn p-0 h-auto text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-semibold"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />

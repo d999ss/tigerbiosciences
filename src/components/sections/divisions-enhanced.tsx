@@ -82,14 +82,14 @@ export function DivisionsEnhanced() {
               <div className="flex flex-col lg:flex-row lg:items-center gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+                    <div className="w-8 h-8 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center text-red-600 dark:text-red-400">
                       {division.icon}
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-slate-900 dark:text-white leading-tight">
                         {division.title}
                       </h3>
-                      <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                      <p className="text-sm text-red-600 dark:text-red-400 font-medium">
                         {division.subtitle}
                       </p>
                     </div>

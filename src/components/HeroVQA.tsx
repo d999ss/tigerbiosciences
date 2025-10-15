@@ -25,15 +25,15 @@ export default function HeroVQA() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <div className="space-y-8">
           {/* Premium Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-full text-blue-700 dark:text-blue-300 text-sm font-medium">
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-full text-red-700 dark:text-red-300 text-sm font-medium">
+            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
             Pioneering Regenerative Medicine Since 2023
           </div>
           
           {/* Hero Title with Premium Typography */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="block text-slate-900 dark:text-white mb-2">Regenerative Medicine</span>
-            <span className="block bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-200 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-red-600 via-red-700 to-red-800 dark:from-red-400 dark:via-red-300 dark:to-red-200 bg-clip-text text-transparent">
               End‑to‑End
             </span>
           </h1>
