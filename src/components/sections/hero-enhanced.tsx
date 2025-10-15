@@ -42,7 +42,7 @@ export function HeroEnhanced({
       variant: "outline",
     },
   ],
-  backgroundImage = "/assets/images/01/TigerBackground.png",
+  backgroundImage = "/assets/images/news/research-collaboration.jpg",
   showGlow = true,
   className,
 }: HeroEnhancedProps) {
@@ -55,11 +55,12 @@ export function HeroEnhanced({
         fill
         priority
         sizes="100vw"
-        className="absolute inset-0 object-cover"
+        className="absolute inset-0 object-cover object-center"
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-transparent" />
       
       {/* Content */}
       <Section className="relative z-10 w-full overflow-hidden">
