@@ -119,7 +119,7 @@ export default function DivisionPage({ params }: PageProps) {
               </h2>
               
               <p className="text-lg text-gray-600 mb-8">
-                We're working hard to bring you detailed information about {division.title}. 
+                We&apos;re working hard to bring you detailed information about {division.title}. 
                 This page will be available soon with comprehensive details about our services, 
                 products, and solutions.
               </p>
