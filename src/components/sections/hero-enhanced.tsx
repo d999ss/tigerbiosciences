@@ -49,15 +49,17 @@ export function HeroEnhanced({
   return (
     <section className={cn("relative min-h-screen flex items-center justify-center overflow-hidden", className)}>
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('${backgroundImage}')`,
-        }}
+      <Image
+        src={backgroundImage}
+        alt="Tiger BioSciences hero background"
+        fill
+        priority
+        sizes="100vw"
+        className="absolute inset-0 object-cover"
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/40" />
       
       {/* Content */}
       <Section className="relative z-10 w-full overflow-hidden">
@@ -68,10 +70,10 @@ export function HeroEnhanced({
                 {subtitle}
               </h4>
             </div>
-            <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight opacity-0 delay-200">
+            <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground inline-block bg-gradient-to-r bg-clip-text text-4xl leading-tight font-semibold text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight opacity-0 delay-200">
               {title}
             </h1>
-            <p className="text-md animate-appear text-muted-foreground max-w-[740px] font-medium opacity-0 delay-300 sm:text-xl text-white/90">
+            <p className="text-md animate-appear max-w-[740px] font-medium opacity-0 delay-300 sm:text-xl text-white">
               {description}
             </p>
             {buttons !== false && buttons.length > 0 && (
@@ -105,6 +107,7 @@ export function HeroEnhanced({
           width={1920}
           height={200}
           className="w-full h-auto hidden md:block"
+          sizes="(min-width: 768px) 100vw, 0"
         />
         <Image
           src="/assets/images/08/mobile_logo_wave_v6.svg"
@@ -112,6 +115,7 @@ export function HeroEnhanced({
           width={768}
           height={100}
           className="w-full h-auto block md:hidden"
+          sizes="(max-width: 767px) 100vw, 0"
         />
       </div>
       
