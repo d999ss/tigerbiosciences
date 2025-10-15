@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/ui/section";
 
@@ -12,11 +13,22 @@ interface FeatureIllustrationBottomProps {
 }
 
 export function FeatureEnhanced({
-  title = "You can change anything. But you don't have to.",
-  description = "Get the full control of the code of your website. Change it or just use the defaults. Customize it in seconds with CSS variables.",
+  title = "Comprehensive regenerative medicine infrastructure",
+  description = "Our platform integrates seamlessly with your existing applications, providing a robust infrastructure for advancing wound care, soft tissue reconstruction, and aesthetics across a global network.",
   visual = (
-    <div className="w-full h-96 bg-gradient-to-br from-tiger-red/10 to-tiger-red/5 rounded-2xl flex items-center justify-center">
-      <div className="text-6xl">🧬</div>
+    <div className="relative">
+      <Image
+        src="/assets/images/biotech/hero-lab.jpg"
+        alt="Tiger BioSciences Infrastructure"
+        width={1200}
+        height={600}
+        className="w-full h-auto object-cover rounded-lg shadow-xl"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-lg"></div>
+      <div className="absolute bottom-6 left-6 text-white">
+        <h3 className="text-2xl font-bold mb-2">Advanced Research Facilities</h3>
+        <p className="text-lg opacity-90">State-of-the-art laboratories driving regenerative medicine innovation</p>
+      </div>
     </div>
   ),
   className,

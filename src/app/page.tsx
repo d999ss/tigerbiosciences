@@ -7,6 +7,7 @@ import { LogosEnhanced } from "@/components/sections/logos-enhanced"
 import { DivisionsEnhanced } from "@/components/sections/divisions-enhanced"
 import { StatsEnhanced } from "@/components/sections/stats-enhanced"
 import { TestimonialsEnhanced } from "@/components/sections/testimonials-enhanced"
+import { TeamEnhanced } from "@/components/sections/team-enhanced"
 import { CTAEnhanced } from "@/components/sections/cta-enhanced"
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <LogosEnhanced />
       <DivisionsEnhanced />
       <StatsEnhanced />
+      <TeamEnhanced />
       <TestimonialsEnhanced />
       <CTAEnhanced />
       <Footer />

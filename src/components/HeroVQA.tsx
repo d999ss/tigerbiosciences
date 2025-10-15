@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
 import { Input } from "@/components/ui/input"
@@ -11,10 +12,22 @@ export default function HeroVQA() {
   return (
     <Section
       className={cn(
-        "fade-bottom w-full overflow-hidden pb-0 sm:pb-0 md:pb-0",
+        "fade-bottom w-full overflow-hidden pb-0 sm:pb-0 md:pb-0 relative",
       )}
     >
-      <div className="max-w-container mx-auto flex flex-col gap-12 sm:gap-24">
+      {/* Hero Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-tiger-red/20 via-background/80 to-background/90 z-10"></div>
+        <Image
+          src="/assets/images/01/TigerBackground.png"
+          alt="Tiger BioSciences Laboratory"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      
+      <div className="max-w-container mx-auto flex flex-col gap-12 sm:gap-24 relative z-20">
         <div className="flex flex-col items-center gap-6 pt-16 text-center sm:gap-12">
           <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
             Regenerative medicine, end‑to‑end
