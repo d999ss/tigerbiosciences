@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Users, Award, Building2, Shield, Zap } from "lucide-react"
+import PartnershipsVQA from "@/components/PartnershipsVQA"
 import Link from "next/link"
 
 const partnershipTypes = [
@@ -41,32 +42,6 @@ const partnershipTypes = [
   },
 ]
 
-const currentPartners = [
-  {
-    name: "Mayo Clinic",
-    type: "Healthcare Provider",
-    description: "Collaborating on clinical trials and product validation for advanced wound care solutions.",
-    logo: "/assets/images/partners/mayo-clinic.png"
-  },
-  {
-    name: "Johns Hopkins University",
-    type: "Research Institution",
-    description: "Joint research initiatives in tissue processing and regenerative medicine technologies.",
-    logo: "/assets/images/partners/johns-hopkins.png"
-  },
-  {
-    name: "Medtronic",
-    type: "Technology Partner",
-    description: "Strategic partnership in medical device integration and advanced manufacturing processes.",
-    logo: "/assets/images/partners/medtronic.png"
-  },
-  {
-    name: "FDA",
-    type: "Regulatory Partner",
-    description: "Working closely with FDA on regulatory pathways and compliance for new product approvals.",
-    logo: "/assets/images/partners/fda.png"
-  }
-]
 
 export default function Partnerships() {
   return (
@@ -129,46 +104,7 @@ export default function Partnerships() {
 
       {/* Current Partners */}
       <Section className="bg-muted/30">
-        <div className="max-w-container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight mb-6">
-              Our Partners
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We&apos;re proud to work with leading organizations across healthcare, research, 
-              and technology to advance medical innovation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {currentPartners.map((partner, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 rounded-lg bg-muted p-3">
-                      <div className="w-full h-full bg-slate-200 rounded flex items-center justify-center text-slate-500 text-sm font-medium">
-                        {partner.name.split(' ').map(word => word[0]).join('')}
-                      </div>
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl group-hover:text-tiger-red transition-colors">
-                        {partner.name}
-                      </CardTitle>
-                      <Badge variant="secondary" className="mt-1">
-                        {partner.type}
-                      </Badge>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {partner.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <PartnershipsVQA />
       </Section>
 
       {/* CTA Section */}

@@ -121,7 +121,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-slate-900">Business Hours</h3>
                       <p className="text-slate-600">
-                        Monday - Friday: 8:00 AM - 6:00 PM EST
+                        Monday - Friday: 8:00 AM - 6:00 PM ET
                       </p>
                     </div>
                   </div>
@@ -137,8 +137,10 @@ export default function Contact() {
                     For urgent matters or technical support, please call our main number 
                     or email us directly.
                   </p>
-                  <Button variant="outline" className="border-tiger-red text-tiger-red hover:bg-tiger-red hover:text-white">
-                    Call Now
+                  <Button asChild variant="outline" className="border-tiger-red text-tiger-red hover:bg-tiger-red hover:text-white">
+                    <a href="tel:+18886655005">
+                      Call Now
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
