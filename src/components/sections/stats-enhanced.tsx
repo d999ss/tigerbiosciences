@@ -1,61 +1,95 @@
 "use client";
 
 import { Section } from "@/components/ui/section";
-import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
-const stats = [
-  {
-    number: "13+",
-    label: "Portfolio Companies",
-    description: "Comprehensive ecosystem of specialized medical technology companies"
-  },
-  {
-    number: "25+",
-    label: "FDA Approvals",
-    description: "Regulatory clearances across our portfolio ensuring quality and safety"
-  },
-  {
-    number: "30+",
-    label: "Countries Served",
-    description: "Global reach with products distributed worldwide"
-  },
-  {
-    number: "150+",
-    label: "Years Combined Experience",
-    description: "Executive leadership driving innovation in medical technology"
-  }
-];
+interface StatItemProps {
+  label?: string;
+  value: string | number;
+  suffix?: string;
+  description?: string;
+}
 
-export function StatsEnhanced() {
+interface StatsProps {
+  title?: string;
+  description?: string;
+  items?: StatItemProps[] | false;
+  className?: string;
+}
+
+export function StatsEnhanced({
+  title = "A proven solution for regenerative medicine",
+  description = "Tiger BioSciences has established itself as a leader in regenerative medicine, with a comprehensive portfolio of companies and products serving healthcare providers worldwide.",
+  items = [
+    {
+      label: "over",
+      value: 13,
+      suffix: "+",
+      description: "portfolio companies",
+    },
+    {
+      label: "more than",
+      value: 25,
+      suffix: "+",
+      description: "FDA approvals and clearances",
+    },
+    {
+      label: "serving",
+      value: 30,
+      suffix: "+",
+      description: "countries worldwide",
+    },
+    {
+      label: "over",
+      value: 150,
+      suffix: "+",
+      description: "years of combined executive experience",
+    },
+  ],
+  className,
+}: StatsProps) {
   return (
-    <Section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-tiger text-headline text-tiger-red mb-4">
-            By the Numbers
+    <Section className={cn("w-full overflow-hidden", className)}>
+      <div className="max-w-container mx-auto flex flex-col gap-8 md:flex-row md:gap-20">
+        <div className="flex flex-col gap-8">
+          <h2 className="max-w-[500px] text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
+            {title}
           </h2>
-          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
-            Our impact in regenerative medicine and medical technology innovation
+          <p className="text-md text-muted-foreground max-w-[540px] font-medium text-pretty sm:text-xl">
+            {description}
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-8">
-                <div className="text-4xl font-bold text-tiger-red mb-2">
-                  {stat.number}
+        {items !== false && items.length > 0 && (
+          <div className="grid grid-cols-2 gap-4 md:p-4">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="glass-3 flex flex-col items-start gap-3 rounded-xl p-4 text-left shadow-xl md:px-8 md:py-6 lg:px-12 lg:py-8"
+              >
+                {item.label && (
+                  <div className="text-muted-foreground text-sm font-semibold">
+                    {item.label}
+                  </div>
+                )}
+                <div className="flex items-baseline gap-2">
+                  <div className="from-foreground to-foreground dark:to-brand bg-linear-to-r bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_var(--brand-foreground)] transition-all duration-300 sm:text-5xl lg:text-6xl">
+                    {item.value}
+                  </div>
+                  {item.suffix && (
+                    <div className="text-brand text-2xl font-semibold">
+                      {item.suffix}
+                    </div>
+                  )}
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {stat.label}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {stat.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                {item.description && (
+                  <div className="text-muted-foreground text-sm font-semibold text-pretty">
+                    {item.description}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </Section>
   );

@@ -13,33 +13,34 @@ import {
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 const products = [
   {
     title: "Wound Care Solutions",
     items: [
-      { title: "Tiger Wound Care", href: "https://tigerwoundcare.com/", description: "Advanced CAMP Solutions for Complex Wounds", external: true },
-      { title: "Extremity Care", href: "https://extremitycare.com", description: "Specialized extremity wound care", external: true },
-      { title: "Encore Surgical Dressings", href: "https://tigerbiosciences.com/our-companies/encore-surgical-dressings/", description: "Premium surgical dressing solutions", external: true },
+      { title: "Tiger Wound Care", href: "/products/tiger-wound-care", description: "Advanced CAMP Solutions for Complex Wounds" },
+      { title: "Extremity Care", href: "/products/extremity-care", description: "Specialized extremity wound care" },
+      { title: "Encore Surgical Dressings", href: "/products/encore-surgical-dressings", description: "Premium surgical dressing solutions" },
     ],
   },
   {
     title: "Tissue Processing",
     items: [
-      { title: "RegenTX", href: "https://tigerbiosciences.com/our-companies/regentx/", description: "Tissue Science Redefined", external: true },
-      { title: "RegenTX Labs", href: "https://tigerbiosciences.com/our-companies/regentx-labs/", description: "Advanced tissue research and development", external: true },
-      { title: "Birth Tissue Recovery", href: "https://tigerbiosciences.com/our-companies/biocare/", description: "Birth tissue processing and recovery", external: true },
-      { title: "bioCARE", href: "https://tigerbiosciences.com/our-companies/biocare/", description: "Comprehensive tissue care solutions", external: true },
+      { title: "RegenTX", href: "/products/regentx", description: "Tissue Science Redefined" },
+      { title: "RegenTX Labs", href: "/products/regentx-labs", description: "Advanced tissue research and development" },
+      { title: "Birth Tissue Recovery", href: "/products/birth-tissue-recovery", description: "Birth tissue processing and recovery" },
+      { title: "bioCARE", href: "/products/biocare", description: "Comprehensive tissue care solutions" },
     ],
   },
   {
     title: "Aesthetic Solutions",
     items: [
-      { title: "Tiger Aesthetics", href: "https://tigerbiosciences.com/our-companies/tiger-aesthetics/", description: "Shaping the Future of Aesthetics", external: true },
-      { title: "Sientra", href: "https://sientra.com", description: "Premium aesthetic solutions", external: true },
-      { title: "BioCreations", href: "https://tigerbiosciences.com/our-companies/biocreations/", description: "Innovative aesthetic technologies", external: true },
-      { title: "Revelle Aesthetics", href: "https://tigerbiosciences.com/our-companies/revelle-aesthetics/", description: "Advanced aesthetic treatments", external: true },
-      { title: "Suneva", href: "https://tigerbiosciences.com/our-companies/suneva/", description: "Cutting-edge aesthetic products", external: true },
+      { title: "Tiger Aesthetics", href: "/products/tiger-aesthetics", description: "Shaping the Future of Aesthetics" },
+      { title: "Sientra", href: "/products/sientra", description: "Premium aesthetic solutions" },
+      { title: "BioCreations", href: "/products/biocreations", description: "Innovative aesthetic technologies" },
+      { title: "Revelle Aesthetics", href: "/products/revelle-aesthetics", description: "Advanced aesthetic treatments" },
+      { title: "Suneva", href: "/products/suneva", description: "Cutting-edge aesthetic products" },
     ],
   },
 ]
@@ -100,7 +101,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center">
@@ -121,7 +122,7 @@ export function Header() {
               <NavigationMenuList>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-0 shadow-none">Company</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-accent text-foreground hover:text-accent-foreground border-0 shadow-none">Company</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {resources.map((section) => (
@@ -146,7 +147,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-0 shadow-none">Solutions</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-accent text-foreground hover:text-accent-foreground border-0 shadow-none">Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-2">
                     {solutions.map((section) => (
@@ -171,7 +172,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-slate-100 text-slate-700 hover:text-slate-900 border-0 shadow-none">Products</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-accent text-foreground hover:text-accent-foreground border-0 shadow-none">Products</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[80vw] max-w-[600px] gap-3 p-4 grid-cols-1 md:grid-cols-3">
                     {products.map((section) => (
@@ -182,11 +183,9 @@ export function Header() {
                             <li key={item.title}>
                               <Link
                                 href={item.href}
-                                className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
-                                {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}>
+                                className="block rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground">
                                 <div className="text-caption font-medium">{item.title}</div>
                                 <div className="text-small text-muted-foreground">{item.description}</div>
-                                {item.external && <span className="ml-1 text-xs">↗</span>}
                               </Link>
                             </li>
                           ))}
@@ -199,7 +198,7 @@ export function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/career" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors">
+                  <Link href="/career" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
                     Career
                   </Link>
                 </NavigationMenuLink>
@@ -208,17 +207,20 @@ export function Header() {
             </NavigationMenu>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="lg:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle navigation"
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {/* Right side actions */}
+          <div className="flex items-center space-x-2">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="sm"
+              className="lg:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -282,10 +284,8 @@ export function Header() {
                             key={item.title}
                             href={item.href}
                             className="block text-caption hover:text-tiger-red"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}>
+                            onClick={() => setIsMobileMenuOpen(false)}>
                             {item.title}
-                            {item.external && <span className="ml-1 text-xs">↗</span>}
                           </Link>
                         ))}
                       </div>
@@ -301,6 +301,13 @@ export function Header() {
               >
                 Career
               </Link>
+              
+              <div className="px-3 py-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-medium">Theme</span>
+                  <ThemeToggle />
+                </div>
+              </div>
             </div>
           </div>
         )}

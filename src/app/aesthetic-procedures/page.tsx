@@ -1,5 +1,4 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
+import { UseCasePage } from "@/components/templates/use-case-page"
 import { Section } from "@/components/ui/section"
 import { Item, ItemIcon, ItemTitle, ItemDescription } from "@/components/ui/item"
 import { Button } from "@/components/ui/button"
@@ -103,29 +102,13 @@ const procedureTypes = [
 
 export default function AestheticProcedures() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
-        <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
-          <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
-            <Badge variant="outline" className="animate-appear">
-              <span className="text-muted-foreground">
-                Aesthetic Excellence
-              </span>
-            </Badge>
-            <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
-              Aesthetic Procedures
-            </h1>
-            <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
-              Tiger Aesthetics offers cutting-edge aesthetic procedures using advanced cellular and matrix-based technology. 
-              Our innovative treatments provide natural-looking results with minimal downtime, helping patients achieve 
-              their aesthetic goals safely and effectively.
-            </p>
-          </div>
-        </div>
-      </Section>
+    <UseCasePage
+      badge="Aesthetic Excellence"
+      title="Aesthetic Procedures"
+      description="Tiger Aesthetics offers cutting-edge aesthetic procedures using advanced cellular and matrix-based technology. Our innovative treatments provide natural-looking results with minimal downtime, helping patients achieve their aesthetic goals safely and effectively."
+      primaryCta={{ href: "/contact", label: "Schedule Consultation" }}
+      secondaryCta={{ href: "/our-companies", label: "Learn About Tiger Aesthetics" }}
+    >
 
       {/* Treatment Benefits */}
       <Section className="bg-muted/30">
@@ -255,7 +238,6 @@ export default function AestheticProcedures() {
         </div>
       </Section>
 
-      <Footer />
-    </main>
+    </UseCasePage>
   )
 }

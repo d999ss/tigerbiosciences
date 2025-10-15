@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import React from 'react'
+import Link from 'next/link'
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 
@@ -56,7 +57,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
         <p><time dateTime={article.date}>{new Date(article.date).toLocaleDateString()}</time></p>
         <div>{article.body}</div>
         <p style={{ marginTop: 32 }}>
-          <a href="/news" aria-label="Back to news">← Back to news</a>
+          <Link href="/news" aria-label="Back to news">← Back to news</Link>
         </p>
       </article>
       <Footer />

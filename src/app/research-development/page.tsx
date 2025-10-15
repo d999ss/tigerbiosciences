@@ -1,5 +1,4 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
+import { UseCasePage } from "@/components/templates/use-case-page"
 import { Section } from "@/components/ui/section"
 import { Item, ItemIcon, ItemTitle, ItemDescription } from "@/components/ui/item"
 import { Button } from "@/components/ui/button"
@@ -104,29 +103,13 @@ const collaborationTypes = [
 
 export default function ResearchDevelopment() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
-        <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
-          <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
-            <Badge variant="outline" className="animate-appear">
-              <span className="text-muted-foreground">
-                Innovation & Research
-              </span>
-            </Badge>
-            <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
-              Research & Development
-            </h1>
-            <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
-              Tiger BioSciences is at the forefront of medical technology innovation through our comprehensive 
-              research and development programs. We invest heavily in cutting-edge research to advance 
-              regenerative medicine, wound healing, and aesthetic treatments.
-            </p>
-          </div>
-        </div>
-      </Section>
+    <UseCasePage
+      badge="Innovation & Research"
+      title="Research & Development"
+      description="Tiger BioSciences is at the forefront of medical technology innovation through our comprehensive research and development programs. We invest heavily in cutting-edge research to advance regenerative medicine, wound healing, and aesthetic treatments."
+      primaryCta={{ href: "/contact", label: "Explore Research Partnerships" }}
+      secondaryCta={{ href: "/partnerships", label: "View Partnership Opportunities" }}
+    >
 
       {/* Research Metrics */}
       <Section className="bg-muted/30">
@@ -273,7 +256,6 @@ export default function ResearchDevelopment() {
         </div>
       </Section>
 
-      <Footer />
-    </main>
+    </UseCasePage>
   )
 }

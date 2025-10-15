@@ -1,5 +1,4 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
+import { UseCasePage } from "@/components/templates/use-case-page"
 import { Section } from "@/components/ui/section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -10,51 +9,16 @@ import Link from "next/link"
 
 export default function WoundCareApplications() {
   return (
-    <main className="min-h-screen">
-      <Header />
-
-      {/* Hero Section */}
-      <Section className="py-16 bg-gradient-to-br from-slate-50 to-white">
-        <div className="max-w-container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="mb-4 bg-tiger-red/10 text-tiger-red border-tiger-red/20">
-                Tiger Wound Care Solutions
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="text-tiger-red">Wound Care</span>
-                <br />
-                <span className="text-2xl md:text-3xl text-muted-foreground">Applications</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Advanced CAMP solutions for complex wounds. Our comprehensive wound care applications provide innovative treatments for chronic and hard-to-treat wounds, delivering clinically validated outcomes across all care settings.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-tiger-red hover:bg-tiger-red-dark">
-                  <Link href="/contact">
-                    Contact Our Team
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/our-companies">
-                    View Our Companies
-                  </Link>
-                </Button>
-              </div>
-            </div>
-            <div className="text-center">
-              <Image
-                src="/assets/images/08/tiger_wound_care_box_left.png"
-                alt="Wound Care Applications"
-                width={300}
-                height={200}
-                className="mx-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </Section>
+    <UseCasePage
+      badge="Tiger Wound Care Solutions"
+      title="Wound Care Applications"
+      description="Advanced CAMP solutions for complex wounds. Our comprehensive wound care applications provide innovative treatments for chronic and hard-to-treat wounds, delivering clinically validated outcomes across all care settings."
+      heroVariant="split"
+      heroImageSrc="/assets/images/08/tiger_wound_care_box_left.png"
+      heroImageAlt="Wound Care Applications"
+      primaryCta={{ href: "/contact", label: "Contact Our Team" }}
+      secondaryCta={{ href: "/our-companies", label: "View Our Companies" }}
+    >
 
       {/* Stats Section */}
       <Section className="py-16 bg-white">
@@ -251,7 +215,6 @@ export default function WoundCareApplications() {
         </div>
       </Section>
 
-      <Footer />
-    </main>
+    </UseCasePage>
   )
 }

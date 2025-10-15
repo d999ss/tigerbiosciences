@@ -148,7 +148,7 @@ export default function RegenTX() {
                 <h3 className="text-lg font-semibold mb-2">RegenTX Labs</h3>
                 <p className="text-sm text-muted-foreground mb-4">Research & development</p>
                 <Button asChild variant="outline" size="sm">
-                  <Link href="/our-companies/regentx-labs">
+                  <Link href="/our-divisions/regentx-labs">
                     Learn More
                     <ArrowRight className="ml-2 h-3 w-3" />
                   </Link>

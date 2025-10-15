@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"
 
 const divisions = [
   {
@@ -8,10 +9,10 @@ const divisions = [
     description: "RegenTX leads in tissue processing and CAMP-based innovation. Rigorous protocols and advanced biotech ensure exceptional tissue quality and consistency. Scientifically driven methods and deep domain expertise set new benchmarks in the field. Focused research and precision manufacturing enable impactful clinical applications.",
     logo: "/assets/images/06/tiger_regentx.png",
     companies: [
-      { name: "RegenTX", logo: "/assets/images/08/regenTX_box_left.png", href: "/our-companies/regentx/" },
-      { name: "RegenTX Labs", logo: "/assets/images/08/regenTX_Labs_box_right.png", href: "/our-companies/regentx-labs/" },
-      { name: "Birth Tissue Recovery", logo: "/assets/images/08/btr_logo_boxed_left.png", href: "/our-companies/biocare/" },
-      { name: "BioCare", logo: "/assets/images/08/bioCare_box_right.png", href: "/our-companies/biocare/" },
+      { name: "RegenTX", logo: "/assets/images/08/regenTX_box_left.png", href: "/products/regentx" },
+      { name: "RegenTX Labs", logo: "/assets/images/08/regenTX_Labs_box_right.png", href: "/products/regentx-labs" },
+      { name: "Birth Tissue Recovery", logo: "/assets/images/08/btr_logo_boxed_left.png", href: "/products/birth-tissue-recovery" },
+      { name: "BioCare", logo: "/assets/images/08/bioCare_box_right.png", href: "/products/biocare" },
     ]
   },
   {
@@ -20,9 +21,9 @@ const divisions = [
     description: "Tiger Wound Care provides Cellular, Acellular, and Matrix-like Products (CAMPs) tailored for chronic and hard-to-treat wounds. Innovative research and development drive technologies suitable for all care settings. Clinically validated products support professionals in improving patient outcomes. A focus on scientific precision ensures consistent performance and reliability.",
     logo: "/assets/images/06/tiger_wound_care_logo.png",
     companies: [
-      { name: "Tiger Wound Care", logo: "/assets/images/08/tiger_wound_care_box_left.png", href: "https://tigerwoundcare.com/" },
-      { name: "Extremity Care", logo: "/assets/images/08/extremitycare_box_right.png", href: "https://extremitycare.com" },
-      { name: "Encore Surgical Supplies", logo: "/assets/images/09/encore_boxed_left.png", href: "/our-companies/encore-surgical-dressings/" },
+      { name: "Tiger Wound Care", logo: "/assets/images/08/tiger_wound_care_box_left.png", href: "/products/tiger-wound-care" },
+      { name: "Extremity Care", logo: "/assets/images/08/extremitycare_box_right.png", href: "/products/extremity-care" },
+      { name: "Encore Surgical Supplies", logo: "/assets/images/09/encore_boxed_left.png", href: "/products/encore-surgical-dressings" },
     ]
   },
   {
@@ -31,10 +32,10 @@ const divisions = [
     description: "Tiger Aesthetics delivers cutting-edge solutions across reconstructive, cosmetic, and regenerative domains. Each product is designed to meet personalized needs and maximize clinical results. Advanced CAMP technologies open new possibilities in aesthetic practice. The portfolio is built to support elevated outcomes and patient satisfaction.",
     logo: "/assets/images/06/TigerAestheticsCircleColor.jpg",
     companies: [
-      { name: "Sientra", logo: "/assets/images/08/sientra_box_left.png", href: "/our-companies/sientra/" },
-      { name: "BioCreations Medical", logo: "/assets/images/08/biocreations_boxed_right.png", href: "/our-companies/biocreations/" },
-      { name: "Revelle Aesthetics Inc", logo: "/assets/images/08/revelle_boxed_left.png", href: "/our-companies/revelle-aesthetics/" },
-      { name: "Suneva", logo: "/assets/images/08/suneva_box_right.png", href: "/our-companies/suneva/" },
+      { name: "Sientra", logo: "/assets/images/08/sientra_box_left.png", href: "/products/sientra" },
+      { name: "BioCreations Medical", logo: "/assets/images/08/biocreations_boxed_right.png", href: "/products/biocreations" },
+      { name: "Revelle Aesthetics Inc", logo: "/assets/images/08/revelle_boxed_left.png", href: "/products/revelle-aesthetics" },
+      { name: "Suneva", logo: "/assets/images/08/suneva_box_right.png", href: "/products/suneva" },
     ]
   },
   {
@@ -106,20 +107,22 @@ export function Divisions() {
         <div className="mt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {divisions.flatMap(division => division.companies).map((company) => (
-              <Card key={company.name} className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <Image
-                    src={company.logo}
-                    alt={company.name}
-                    width={150}
-                    height={100}
-                    className="mx-auto mb-4 group-hover:scale-105 transition-transform"
-                  />
-                  <h4 className="text-caption text-muted-foreground">
-                    {company.name}
-                  </h4>
-                </CardContent>
-              </Card>
+              <Link key={company.name} href={company.href} className="block">
+                <Card className="group hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <Image
+                      src={company.logo}
+                      alt={company.name}
+                      width={150}
+                      height={100}
+                      className="mx-auto mb-4 group-hover:scale-105 transition-transform"
+                    />
+                    <h4 className="text-caption text-muted-foreground">
+                      {company.name}
+                    </h4>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
