@@ -234,13 +234,13 @@ export function Footer() {
                 Tiger Wound Care
               </Link>
               <Link 
-                href="/our-companies" 
+                href="/our-companies/tiger-aesthetics" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Tiger Aesthetics
               </Link>
               <Link 
-                href="/our-companies" 
+                href="/our-companies/tiger-production" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Tiger Production & Services
