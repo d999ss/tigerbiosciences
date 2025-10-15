@@ -1,41 +1,42 @@
 import {
-  Shield,
-  Globe,
-  Zap,
-  Users,
-  Microscope,
-  Heart,
-  Sparkles,
-  Award,
-  ArrowRight,
   Lock,
   Network,
+  User,
+  ArrowRight,
+  Cloud,
+  Server,
   Settings,
   Database,
-  Cloud,
+  Globe,
   Webhook,
 } from "lucide-react";
 
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import Hero from "@/launch-ui-pro/sections/hero/illustration";
-import Stats from "@/launch-ui-pro/sections/stats/grid-boxed";
-import Logos from "@/launch-ui-pro/sections/logos/grid-6";
-import BentoGrid from "@/launch-ui-pro/sections/bento-grid/3-rows-top";
-import FeatureIllustrationBottom from "@/launch-ui-pro/sections/feature/illustration-bottom";
-import Items from "@/launch-ui-pro/sections/items/default-brand";
-import TestimonialsGrid from "@/launch-ui-pro/sections/testimonials/grid";
-import CTA from "@/launch-ui-pro/sections/cta/box";
-import RisingSmallIllustration from "@/launch-ui-pro/illustrations/rising-small";
-import RisingLargeIllustration from "@/launch-ui-pro/illustrations/rising-large";
-import MockupBrowserIllustration from "@/launch-ui-pro/illustrations/mockup-browser";
-import ChatIllustration from "@/launch-ui-pro/illustrations/chat";
-import CodeEditorIllustration from "@/launch-ui-pro/illustrations/code-editor";
-import MockupMobileIllustration from "@/launch-ui-pro/illustrations/mockup-mobile";
-import { Button } from "@/launch-ui-pro/ui/button";
-import { Input } from "@/launch-ui-pro/ui/input";
+import Hero from "../../launch-ui-pro/sections/hero/illustration";
+import Stats from "../../launch-ui-pro/sections/stats/grid-boxed";
+import Logos from "../../launch-ui-pro/sections/logos/grid-6";
+import BentoGrid from "../../launch-ui-pro/sections/bento-grid/3-rows-top";
+import FeatureIllustrationBottom from "../../launch-ui-pro/sections/feature/illustration-bottom";
+import Items from "../../launch-ui-pro/sections/items/default-brand";
+import TestimonialsGrid from "../../launch-ui-pro/sections/testimonials/grid";
+import Pricing from "../../launch-ui-pro/sections/pricing/3-cols-subscription";
+import FAQ from "../../launch-ui-pro/sections/faq/static";
+import CTA from "../../launch-ui-pro/sections/cta/box";
+import LunaLogo from "../../launch-ui-pro/logos/luna";
+import Catalog from "../../launch-ui-pro/logos/catalog";
+import CoreOS from "../../launch-ui-pro/logos/coreos";
+import LeapYear from "../../launch-ui-pro/logos/leapyear";
+import Peregrin from "../../launch-ui-pro/logos/peregrin";
+import PictelAI from "../../launch-ui-pro/logos/pictelai";
+import RisingSmallIllustration from "../../launch-ui-pro/illustrations/rising-small";
+import RisingLargeIllustration from "../../launch-ui-pro/illustrations/rising-large";
+import MockupBrowserIllustration from "../../launch-ui-pro/illustrations/mockup-browser";
+import ChatIllustration from "../../launch-ui-pro/illustrations/chat";
+import CodeEditorIllustration from "../../launch-ui-pro/illustrations/code-editor";
+import MockupMobileIllustration from "../../launch-ui-pro/illustrations/mockup-mobile";
+import { Button } from "../../launch-ui-pro/ui/button";
+import { Input } from "../../launch-ui-pro/ui/input";
 
-export default function Home() {
+export default function MCPServerPage() {
   return (
     <div
       className="flex flex-col"
@@ -50,78 +51,78 @@ export default function Home() {
         } as React.CSSProperties
       }
     >
-      <Header />
       <main className="flex-1">
         <Hero
-          title="Regenerative medicine, end‑to‑end"
-          description="We design and deliver cellular, acellular, and matrix‑like products—vertically integrated from donor screening to global distribution—to raise the standard of care in wound, reconstructive, and aesthetic medicine."
+          title="Build MCP servers on a global edge network"
+          description="Our platform enables you to quickly deploy MCP servers with global distribution, advanced caching, and optimized performance on our worldwide edge infrastructure."
           illustration={<RisingSmallIllustration />}
           form={
             <>
               <form className="flex w-full max-w-[420px] gap-2">
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Email address"
                   className="border-border/10 bg-foreground/10 grow"
                 />
                 <Button variant="default" size="lg" asChild>
-                  <a href="/our-companies">Get Started</a>
+                  <a href="https://www.launchuicomponents.com/">Join waitlist</a>
                 </Button>
               </form>
               <p className="text-muted-foreground text-xs">
-                Join healthcare providers worldwide who trust Tiger BioSciences.
+                We&apos;ll notify you when we launch.
               </p>
             </>
           }
         />
         <Stats
-          title="Industry-leading regenerative medicine"
-          description="Our comprehensive portfolio delivers exceptional outcomes across wound care, soft tissue reconstruction, and aesthetic medicine."
+          title="Industry-leading performance"
+          description="Our MCP servers offer exceptional speed and reliability, powering thousands of applications across the globe."
           items={[
             {
-              value: "25+",
-              label: "FDA Approvals",
-              description: "Regulatory clearances across our portfolio companies",
+              value: "99.99%",
+              label: "Uptime guarantee",
+              description: "We ensure maximum availability of your MCP servers",
             },
             {
-              value: "30+",
-              label: "Countries",
-              description: "Global reach serving healthcare providers worldwide",
+              value: "200+",
+              label: "Edge locations",
+              description: "Global network presence for reduced latency",
             },
             {
-              value: "13+",
-              label: "Portfolio Companies",
-              description: "Specialized companies working together",
+              value: "5,000+",
+              label: "Active deployments",
+              description: "Trusted by developers across industries",
             },
             {
-              value: "150+",
-              label: "Years Experience",
-              description: "Combined executive expertise in medical technology",
+              value: "<10ms",
+              label: "Response time",
+              description: "Lightning-fast request processing",
             },
           ]}
         />
         <Logos
-          title="Trusted by leading regulatory bodies and industry standards"
+          title="Trusted by technology-forward organizations"
           logoItems={[
-            { logo: <div className="text-2xl font-bold text-tiger-red">FDA</div> },
-            { logo: <div className="text-2xl font-bold text-tiger-red">ISO</div> },
-            { logo: <div className="text-2xl font-bold text-tiger-red">AATB</div> },
-            { logo: <div className="text-2xl font-bold text-tiger-red">CE</div> },
-            { logo: <div className="text-lg font-bold text-tiger-red">Health Canada</div> },
-            { logo: <div className="text-2xl font-bold text-tiger-red">TGA</div> },
+            { logo: <Catalog className="h-8 w-auto" /> },
+            { logo: <CoreOS className="h-8 w-auto" /> },
+            { logo: <LeapYear className="h-8 w-auto" /> },
+            { logo: <Peregrin className="h-8 w-auto" /> },
+            { logo: <PictelAI className="h-8 w-auto" /> },
+            { logo: <LunaLogo className="h-8 w-auto" /> },
           ]}
         />
         <BentoGrid
-          title="Advanced regenerative medicine solutions"
-          description="Our platform provides comprehensive tools for tissue processing, quality assurance, and global distribution of regenerative medicine products."
+          title="Advanced MCP server features"
+          description="Our platform provides a comprehensive suite of tools for deploying, managing, and scaling your MCP servers on the CloudFlare Network infrastructure."
           tiles={[
             {
-              title: "Tissue Processing Excellence",
+              title: "Easy Deployment",
               description: (
                 <>
                   <p className="max-w-[320px] lg:max-w-[460px]">
-                    Advanced tissue processing with rigorous protocols and cutting-edge 
-                    biotech ensuring exceptional tissue quality and consistency across all products.
+                    Deploy your MCP server with just a few clicks using our
+                    intuitive interface or via CLI. No complex configuration
+                    required to get started.
                   </p>
                 </>
               ),
@@ -131,7 +132,7 @@ export default function Home() {
                 </div>
               ),
               icon: (
-                <Microscope className="text-muted-foreground size-6 stroke-1" />
+                <Server className="text-muted-foreground size-6 stroke-1" />
               ),
               size: "col-span-12 md:flex-row",
             },
@@ -139,8 +140,9 @@ export default function Home() {
               title: "Global Distribution",
               description: (
                 <p className="max-w-[460px]">
-                  Worldwide distribution network ensuring consistent quality and 
-                  regulatory compliance across all markets with state-of-the-art facilities.
+                  Automatically distribute your MCP instances across our global
+                  edge network to ensure low latency and high availability for
+                  all users.
                 </p>
               ),
               visual: (
@@ -152,11 +154,12 @@ export default function Home() {
               size: "col-span-12 md:col-span-6 lg:col-span-5",
             },
             {
-              title: "Quality Assurance",
+              title: "Scalable Infrastructure",
               description: (
                 <p className="max-w-[460px]">
-                  Fully integrated approach from donor screening to global distribution 
-                  ensuring unparalleled quality and patient safety in every product.
+                  Our system automatically scales your MCP servers based on
+                  traffic demands, ensuring optimal performance even during
+                  traffic spikes.
                 </p>
               ),
               visual: (
@@ -165,28 +168,28 @@ export default function Home() {
                 </div>
               ),
               icon: (
-                <Shield className="text-muted-foreground size-6 stroke-1" />
+                <Database className="text-muted-foreground size-6 stroke-1" />
               ),
               size: "col-span-12 md:col-span-6 lg:col-span-7",
             },
             {
-              title: "Clinical Innovation",
+              title: "Advanced Caching",
               description:
-                "Pioneering the future of regenerative medicine through cutting-edge research, development, and clinical applications that set new industry standards.",
+                "Intelligent caching mechanisms dramatically reduce load times and minimize origin server requests, improving user experience.",
               visual: (
                 <div className="min-h-[240px] grow basis-0 sm:p-4 md:min-h-[320px] md:py-12 lg:min-h-[360px]">
                   <MockupBrowserIllustration />
                 </div>
               ),
-              icon: <Sparkles className="text-muted-foreground size-6 stroke-1" />,
+              icon: <Cloud className="text-muted-foreground size-6 stroke-1" />,
               size: "col-span-12 md:col-span-6 lg:col-span-6",
             },
             {
-              title: "Patient Outcomes",
+              title: "Real-time Analytics",
               description: (
                 <p className="max-w-[460px]">
-                  Comprehensive solutions for wound care, soft tissue reconstruction, 
-                  and aesthetic medicine delivering exceptional patient outcomes.
+                  Monitor your MCP server performance, traffic patterns, and
+                  resource usage with comprehensive real-time analytics.
                 </p>
               ),
               visual: (
@@ -195,72 +198,72 @@ export default function Home() {
                 </div>
               ),
               icon: (
-                <Heart className="text-muted-foreground size-6 stroke-1" />
+                <Settings className="text-muted-foreground size-6 stroke-1" />
               ),
               size: "col-span-12 md:col-span-6 lg:col-span-6",
             },
           ]}
         />
         <FeatureIllustrationBottom
-          title="Comprehensive regenerative medicine infrastructure"
-          description="Our platform integrates seamlessly with healthcare systems, providing a robust infrastructure for advancing wound care, soft tissue reconstruction, and aesthetics across a global network."
+          title="Comprehensive MCP infrastructure"
+          description="Our platform integrates seamlessly with your existing applications, providing a robust infrastructure for running your MCP servers across a global network."
           visual={<RisingLargeIllustration />}
         />
         <Items
-          title="Regenerative medicine capabilities"
+          title="MCP server capabilities"
           items={[
             {
-              title: "FDA Compliance",
+              title: "SSL Encryption",
               description:
-                "Full regulatory compliance with FDA standards and international regulations ensuring the highest quality and safety standards.",
+                "Automatic SSL certificate provisioning and renewal for secure connections to your MCP servers.",
               icon: <Lock className="text-muted-foreground size-6 stroke-1" />,
             },
             {
-              title: "Global Reach",
+              title: "Custom Domains",
               description:
-                "Serving healthcare providers in 30+ countries with comprehensive portfolio of regenerative medicine solutions.",
+                "Connect your own domain names to your MCP servers with easy DNS configuration and management.",
               icon: <Globe className="text-muted-foreground size-6 stroke-1" />,
             },
             {
-              title: "Tissue Engineering",
+              title: "API Integration",
               description:
-                "Advanced cellular, acellular, and matrix-like products (CAMPs) with cutting-edge tissue engineering technologies.",
+                "Comprehensive API access for automating deployments, configurations, and management tasks.",
               icon: (
                 <Network className="text-muted-foreground size-6 stroke-1" />
               ),
             },
             {
-              title: "Quality Systems",
+              title: "Edge Computing",
               description:
-                "Comprehensive quality management systems ensuring consistency and reliability across all products.",
+                "Execute code at the edge for faster responses and reduced backend load.",
               icon: <Cloud className="text-muted-foreground size-6 stroke-1" />,
             },
             {
-              title: "Research & Development",
+              title: "Configuration Management",
               description:
-                "Continuous innovation through dedicated R&D programs advancing the future of regenerative medicine.",
+                "Version-controlled configuration files with easy rollback capabilities.",
               icon: (
                 <Settings className="text-muted-foreground size-6 stroke-1" />
               ),
             },
             {
-              title: "Clinical Data",
+              title: "Logging & Monitoring",
               description:
-                "Extensive clinical data and research supporting the efficacy and safety of our regenerative medicine solutions.",
+                "Advanced logging with searchable history and customizable alerts for critical events.",
               icon: (
                 <Database className="text-muted-foreground size-6 stroke-1" />
               ),
             },
             {
-              title: "Expert Leadership",
+              title: "Priority Support",
               description:
-                "150+ years of combined executive experience driving innovation in medical technology and tissue processing.",
-              icon: <Users className="text-muted-foreground size-6 stroke-1" />,
+                "Priority support for critical issues and proactive assistance to ensure your MCP servers are always running smoothly.",
+              icon: <User className="text-muted-foreground size-6 stroke-1" />,
             },
             {
-              title: "Integrated Solutions",
+              title: "Custom Integrations",
               description:
-                "End-to-end solutions from donor screening to global distribution for seamless healthcare provider experience.",
+                "Seamless integration with your existing systems and tools for a streamlined deployment process.",
               icon: (
                 <Webhook className="text-muted-foreground size-6 stroke-1" />
               ),
@@ -270,37 +273,162 @@ export default function Home() {
         <TestimonialsGrid
           items={[
             {
-              name: "Dr. Sarah Chen",
-              role: "Chief Medical Officer, MedTech Innovations",
-              text: "Tiger BioSciences has revolutionized our approach to regenerative medicine. Their comprehensive CAMP solutions have significantly improved patient outcomes in our wound care programs.",
-              image: "/assets/images/01/tiger_logo-v2.png",
+              name: "David Chen",
+              role: "CTO, TechStream",
+              text: "Deploying our MCP servers on CloudFlare Network has reduced our global response times by 65%. The integration was seamless and the performance is outstanding.",
+              image: "/avatars/sarah.jpg",
+              Logo: Catalog,
             },
             {
-              name: "Dr. Michael Rodriguez",
-              role: "Director of Research, Advanced Tissue Center",
-              text: "The quality and consistency of Tiger BioSciences' tissue processing is unmatched. Their integrated approach from donor screening to distribution ensures the highest standards.",
-              image: "/assets/images/01/tiger_logo-v2.png",
+              name: "Alex Rodriguez",
+              role: "Lead Developer, DataFlex",
+              text: "The ability to deploy MCP servers across multiple regions with a single command has transformed our deployment pipeline. We're shipping features faster than ever.",
+              image: "/avatars/marcin.jpg",
+              Logo: CoreOS,
+            },
+          ]}
+        />
+        <Pricing
+          title="MCP server plans for applications of all sizes"
+          description="Choose the right level of resources and capabilities for your application needs with our flexible MCP server packages."
+          plans={[
+            {
+              name: "Developer",
+              description: "Essential features for individual developers",
+              monthlyPrice: 19,
+              yearlyPrice: 190,
+              features: [
+                "1 MCP server instance",
+                "10GB bandwidth/month",
+                "3 custom domains",
+                "Basic analytics",
+                "Community support",
+              ],
+              cta: {
+                label: "Get started",
+                href: "#",
+                variant: "glow",
+              },
+            },
+            {
+              name: "Business",
+              description: "Advanced features for growing applications",
+              monthlyPrice: 79,
+              yearlyPrice: 790,
+              variant: "glow-brand",
+              features: [
+                "10 MCP server instances",
+                "100GB bandwidth/month",
+                "Unlimited custom domains",
+                "Advanced analytics",
+                "Edge computing",
+                "Priority support",
+              ],
+              cta: {
+                label: "Get started",
+                href: "#",
+                variant: "default",
+              },
+            },
+            {
+              name: "Enterprise",
+              description:
+                "Complete solution for mission-critical applications",
+              monthlyPrice: 199,
+              yearlyPrice: 1990,
+              features: [
+                "Unlimited MCP instances",
+                "Custom bandwidth allocation",
+                "Dedicated account manager",
+                "Custom integrations",
+                "Advanced security features",
+                "24/7 premium support",
+              ],
+              cta: {
+                label: "Contact sales",
+                href: "#",
+                variant: "glow",
+              },
+            },
+          ]}
+        />
+        <FAQ
+          title="Frequently asked questions"
+          items={[
+            {
+              question: "How quickly can I deploy an MCP server?",
+              answer: (
+                <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
+                  Deployment typically takes less than 2 minutes. Once
+                  you&apos;ve created your account, you can deploy your first
+                  MCP server with just a few clicks or a single CLI command. The
+                  server will be instantly available across our global network.
+                </p>
+              ),
+            },
+            {
+              question: "Can I use my existing edge provider account?",
+              answer: (
+                <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
+                  Yes, you can connect your existing edge provider account to
+                  our platform. This allows you to manage your MCP servers
+                  alongside your other services while taking advantage of our
+                  specialized MCP management tools.
+                </p>
+              ),
+            },
+            {
+              question: "How does scaling work for MCP servers?",
+              answer: (
+                <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
+                  Our platform automatically scales your MCP servers based on
+                  traffic patterns. You can also set manual scaling rules or
+                  schedule scaling events for predictable traffic increases. All
+                  scaling happens without downtime or performance degradation.
+                </p>
+              ),
+            },
+            {
+              question: "Can I run custom code on my MCP servers?",
+              answer: (
+                <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
+                  Absolutely. Our MCP servers support custom code execution in
+                  multiple languages, including JavaScript, Python, Go, and
+                  Rust. You can deploy code directly from your Git repositories
+                  or upload directly through our interface or API.
+                </p>
+              ),
+            },
+            {
+              question: "Do you offer a free trial?",
+              answer: (
+                <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
+                  Yes, we offer a 14-day free trial of our Business plan with no
+                  credit card required. This gives you full access to our
+                  platform features so you can evaluate how it works with your
+                  applications before making a commitment.
+                </p>
+              ),
             },
           ]}
         />
         <CTA
-          title="Ready to advance regenerative medicine?"
-          description="Join healthcare providers worldwide who trust Tiger BioSciences for their regenerative medicine needs. Contact us today to learn more about our comprehensive solutions."
+          title="Ready to deploy your MCP server?"
+          description="Get started with our platform today and experience the power of MCP servers on our global edge infrastructure."
           buttons={[
             {
-              text: "Contact Us",
-              href: "/contact",
+              text: "Deploy now",
+              href: "#",
               variant: "default",
             },
             {
-              text: "Explore Solutions",
-              href: "/our-companies",
+              text: "View documentation",
+              href: "#",
               variant: "outline",
             },
           ]}
         />
-      </main>
-      <Footer />
+    </main>
     </div>
   );
 }
