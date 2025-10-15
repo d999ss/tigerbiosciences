@@ -1,112 +1,125 @@
 "use client";
 
 import { Section } from "@/components/ui/section";
-import { Tile, TileVisual, TileTitle, TileDescription, TileContent, TileLink } from "@/components/ui/tile";
-import { Microscope, Heart, Sparkles, Globe, Wrench } from "lucide-react";
-import Image from "next/image";
+import { Microscope, Heart, Sparkles, Globe, Wrench, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const divisions = [
   {
     title: "RegenTX Division",
     subtitle: "Tissue Science Redefined",
     description: "RegenTX leads in tissue processing and CAMP-based innovation. Rigorous protocols and advanced biotech ensure exceptional tissue quality and consistency.",
-    logo: "/assets/images/06/tiger_regentx.png",
-    icon: <Microscope className="text-muted-foreground size-6 stroke-1" />,
-    stats: { fdaApprovals: "8+", countries: "15+", products: "12+" },
-    size: "col-span-12 md:col-span-6 lg:col-span-5"
+    icon: <Microscope className="w-5 h-5" />,
+    stats: {
+      fdaApprovals: "8+",
+      countries: "15+",
+      products: "12+"
+    }
   },
   {
     title: "Tiger Wound Care",
     subtitle: "Advanced CAMP Solutions",
     description: "Tiger Wound Care provides Cellular, Acellular, and Matrix-like Products (CAMPs) tailored for chronic and hard-to-treat wounds with clinically validated outcomes.",
-    logo: "/assets/images/06/tiger_wound_care_logo.png",
-    icon: <Heart className="text-muted-foreground size-6 stroke-1" />,
-    stats: { fdaApprovals: "12+", countries: "25+", products: "18+" },
-    size: "col-span-12 md:col-span-6 lg:col-span-7"
+    icon: <Heart className="w-5 h-5" />,
+    stats: {
+      fdaApprovals: "12+",
+      countries: "25+",
+      products: "18+"
+    }
   },
   {
     title: "Tiger Aesthetics",
     subtitle: "Shaping the Future of Aesthetics",
     description: "Tiger Aesthetics delivers cutting-edge solutions across reconstructive, cosmetic, and regenerative domains with advanced CAMP technologies.",
-    logo: "/assets/images/06/TigerAestheticsCircleColor.jpg",
-    icon: <Sparkles className="text-muted-foreground size-6 stroke-1" />,
-    stats: { fdaApprovals: "15+", countries: "20+", products: "25+" },
-    size: "col-span-12 md:col-span-6 lg:col-span-7"
+    icon: <Sparkles className="w-5 h-5" />,
+    stats: {
+      fdaApprovals: "15+",
+      countries: "20+",
+      products: "25+"
+    }
   },
   {
     title: "Tiger International",
     subtitle: "Global Access to Advanced Technologies",
     description: "Tiger BioSciences International enables worldwide distribution of cutting-edge cell and tissue products with regulatory excellence.",
-    logo: "/assets/images/06/tiger_international_logo.png",
-    icon: <Globe className="text-muted-foreground size-6 stroke-1" />,
-    stats: { fdaApprovals: "5+", countries: "30+", products: "8+" },
-    size: "col-span-12 md:col-span-6 lg:col-span-5"
+    icon: <Globe className="w-5 h-5" />,
+    stats: {
+      fdaApprovals: "5+",
+      countries: "30+",
+      products: "8+"
+    }
   },
   {
     title: "Tiger Production & Services",
     subtitle: "Medical Device Engineering",
     description: "Tiger Production & Services handles engineering projects for medical devices with in-house expertise from concept to manufacturing.",
-    logo: "/assets/images/06/tiger_production_services.jpg",
-    icon: <Wrench className="text-muted-foreground size-6 stroke-1" />,
-    stats: { fdaApprovals: "3+", countries: "10+", products: "5+" },
-    size: "col-span-12 md:col-span-6 lg:col-span-5"
+    icon: <Wrench className="w-5 h-5" />,
+    stats: {
+      fdaApprovals: "3+",
+      countries: "10+",
+      products: "5+"
+    }
   }
 ];
 
 export function DivisionsEnhanced() {
   return (
-    <Section className="py-16">
-      <div className="max-w-container mx-auto flex flex-col items-center gap-6 sm:gap-12">
-        <h2 className="text-center text-3xl font-semibold text-balance sm:text-5xl">
-          Our Divisions
-        </h2>
-        <p className="text-md text-muted-foreground max-w-[840px] text-center font-medium text-balance sm:text-xl">
-          A comprehensive portfolio of specialized companies working together to advance 
-          medical technology and deliver exceptional outcomes across multiple domains.
-        </p>
+    <Section className="py-12 bg-slate-50 dark:bg-slate-900">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">
+            Our Divisions
+          </h2>
+          <p className="text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            A comprehensive portfolio of specialized companies working together to advance 
+            medical technology and deliver exceptional outcomes across multiple domains.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-12 gap-4">
-          {divisions.map((division) => (
-            <Tile key={division.title} className={division.size}>
-              <TileLink />
-              <TileContent>
-                {division.icon}
-                <TileTitle>{division.title}</TileTitle>
-                <TileDescription>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {division.subtitle}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {division.description}
-                  </p>
-                  <div className="flex gap-4 text-xs">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-tiger-red">{division.stats.fdaApprovals}</div>
-                      <div className="text-muted-foreground">FDA Approvals</div>
+        <div className="space-y-6">
+          {divisions.map((division, index) => (
+            <div key={division.title} className="border-b border-slate-200 dark:border-slate-700 pb-6 last:border-b-0">
+              <div className="flex flex-col lg:flex-row lg:items-center gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+                      {division.icon}
                     </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-tiger-red">{division.stats.countries}</div>
-                      <div className="text-muted-foreground">Countries</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-tiger-red">{division.stats.products}</div>
-                      <div className="text-muted-foreground">Products</div>
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900 dark:text-white leading-tight">
+                        {division.title}
+                      </h3>
+                      <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                        {division.subtitle}
+                      </p>
                     </div>
                   </div>
-                </TileDescription>
-              </TileContent>
-              <TileVisual>
-                <div className="min-h-[200px] w-full flex items-center justify-center">
-                  <Image
-                    src={division.logo}
-                    alt={division.title}
-                    width={120}
-                    height={120}
-                    className="rounded-lg"
-                  />
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                    {division.description}
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">{division.stats.fdaApprovals}</div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400">FDA Approvals</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">{division.stats.countries}</div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400">Countries</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">{division.stats.products}</div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400">Products</div>
+                    </div>
+                  </div>
                 </div>
-              </TileVisual>
-            </Tile>
+                <div className="lg:w-32 flex-shrink-0">
+                  <Button variant="outline" size="sm" className="w-full">
+                    Learn More
+                    <ArrowRight className="w-3 h-3 ml-1" />
+                  </Button>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

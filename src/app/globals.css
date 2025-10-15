@@ -9,6 +9,17 @@
   font-style: normal;
 }
 
+/* Container width utilities for consistent layouts across sections */
+@layer utilities {
+  .max-w-container {
+    max-width: 1280px;
+  }
+
+  .max-w-container-lg {
+    max-width: 1536px;
+  }
+}
+
 @font-face {
   font-family: 'Neuropa';
   src: url('/assets/fonts/Neuropa_Bold.otf') format('opentype');
