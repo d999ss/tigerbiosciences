@@ -22,7 +22,7 @@ export default function HeroVQA() {
       </div>
       
       {/* Content Container */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-container mx-auto px-6 text-center">
         <div className="space-y-8">
           {/* Premium Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-full text-red-700 dark:text-red-300 text-sm font-medium">
