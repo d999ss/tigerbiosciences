@@ -24,37 +24,37 @@ export function TeamEnhanced({
     {
       name: "Dr. Sarah Johnson",
       role: "Chief Executive Officer",
-      image: "/assets/images/leadership/sarah-johnson.jpg",
+      image: "/assets/images/01/tiger_logo-v2.png",
       bio: "20+ years in medical technology and regenerative medicine"
     },
     {
       name: "Dr. Michael Chen",
       role: "Chief Scientific Officer",
-      image: "/assets/images/leadership/michael-chen.jpg",
+      image: "/assets/images/01/tiger_logo-v2.png",
       bio: "Leading researcher in tissue engineering and CAMP technologies"
     },
     {
       name: "Emily Rodriguez",
       role: "Chief Operating Officer",
-      image: "/assets/images/leadership/emily-rodriguez.jpg",
+      image: "/assets/images/01/tiger_logo-v2.png",
       bio: "Expert in global operations and regulatory affairs"
     },
     {
       name: "Dr. James Wilson",
       role: "Chief Medical Officer",
-      image: "/assets/images/leadership/james-wilson.jpg",
+      image: "/assets/images/01/tiger_logo-v2.png",
       bio: "Board-certified surgeon with focus on regenerative applications"
     },
     {
       name: "Lisa Park",
       role: "Chief Technology Officer",
-      image: "/assets/images/leadership/lisa-park.jpg",
+      image: "/assets/images/01/tiger_logo-v2.png",
       bio: "Innovation leader in medical device technology"
     },
     {
       name: "David Thompson",
       role: "Chief Financial Officer",
-      image: "/assets/images/leadership/david-thompson.jpg",
+      image: "/assets/images/01/tiger_logo-v2.png",
       bio: "Financial strategist with healthcare industry expertise"
     },
   ],
