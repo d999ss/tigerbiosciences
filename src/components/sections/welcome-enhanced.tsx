@@ -43,7 +43,7 @@ export function WelcomeEnhanced({
       title: "FDA Approved Excellence",
       description: "Over 25 FDA approvals and regulatory clearances across our portfolio companies, ensuring the highest quality standards and patient safety in every product we deliver.",
       icon: <Shield className="w-6 h-6" />,
-      image: "/assets/images/biotech/research-lab.jpg",
+      image: "/assets/images/biotech/clinical-lab.jpg",
       stats: "25+ FDA Approvals"
     },
     {
