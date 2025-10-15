@@ -60,25 +60,25 @@ export function Footer() {
             <h3 className="font-semibold">Products</h3>
             <div className="space-y-3">
               <Link 
-                href="https://tigerbiosciences.com/our-companies/wound-care/" 
+                href="/wound-care-applications" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Wound Care Solutions
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/tissue-processing/" 
+                href="/tissue-processing" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Tissue Processing
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/aesthetics/" 
+                href="/aesthetic-procedures" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Aesthetic Solutions
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/international/" 
+                href="/our-companies" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 International Products
@@ -91,25 +91,25 @@ export function Footer() {
             <h3 className="font-semibold">Solutions</h3>
             <div className="space-y-3">
               <Link 
-                href="https://tigerbiosciences.com/our-companies/wound-care/" 
+                href="/wound-care-applications" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Pain Management
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/tissue-processing/" 
+                href="/research-development" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 R&D Services
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/aesthetics/" 
+                href="/aesthetic-procedures" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Soft Tissue Reconstruction
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/international/" 
+                href="/our-companies" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Global Distribution
@@ -220,25 +220,27 @@ export function Footer() {
             <h3 className="font-semibold">Our Divisions</h3>
             <div className="space-y-3">
               <Link 
-                href="https://tigerbiosciences.com/our-companies/regenTX/" 
+                href="/our-companies/regentx" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 RegenTX
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/tiger-wound-care/" 
+                href="https://tigerwoundcare.com/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Tiger Wound Care
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/tiger-aesthetics/" 
+                href="/our-companies" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Tiger Aesthetics
               </Link>
               <Link 
-                href="https://tigerbiosciences.com/our-companies/tiger-production/" 
+                href="/our-companies" 
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Tiger Production & Services
